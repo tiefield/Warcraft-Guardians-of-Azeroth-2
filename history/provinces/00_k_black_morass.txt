@@ -152,7 +152,7 @@
 	583.1.1 = {
 		culture = stormreaver
 		religion = orcish_fel
-		special_building = dark_portal_02
+		special_building = holy_site_cathedral_01
 	}
 	590.11.1={
 		holding = castle_holding
