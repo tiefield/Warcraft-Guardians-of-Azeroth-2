@@ -359,6 +359,9 @@
 			}
 			desc = WONT_ATTACK_RELIGIOUS_BRETHREN_REASON
 		}
+		
+		# Warcraft
+		scourge_interaction_modifiers = yes
 	}
 
 	# Score above 0 means the AI will call this ally. Note that DESIRED_WAR_SIDE_STRENGTH still applies and can prevent calling the ally
@@ -741,6 +744,24 @@ negotiate_alliance_interaction = {
 					}
 				}
 			}
+			else_if = {
+				limit = {
+					scope:actor = { has_perk = defensive_negotiations_perk }
+				}
+				scope:actor = {
+					create_alliance = {
+						target = scope:recipient
+						allied_through_owner = scope:actor
+						allied_through_target = scope:recipient
+					}
+				}
+				scope:recipient = { # This opinion modifier controls the interaction, and is removed when breaking the alliance in any way (though on_actions)
+					add_opinion = {
+						modifier = perk_negotiated_alliance_opinion
+						target = scope:actor
+					}
+				}
+			}
 		}
 	}
 	
@@ -783,6 +804,9 @@ negotiate_alliance_interaction = {
 		# Warcraft
 		negotiate_alliance_tier_modifiers = yes
 		negotiate_alliance_modifiers = yes
+		
+		# Warcraft
+		scourge_interaction_modifiers = yes
 	}
 
 	ai_potential = {
@@ -1338,6 +1362,9 @@ perk_alliance_interaction = {
 			add = -100
 			desc = DECLARED_WAR_REASON
 		}
+		
+		# Warcraft
+		scourge_interaction_modifiers = yes
 	}
 
 	ai_potential = {
@@ -1645,5 +1672,8 @@ join_war_interaction = {
 
 	ai_accept = {
 		base = 100 # everyone wants help
+
+		# Warcraft
+		scourge_interaction_modifiers = yes
 	}
 }

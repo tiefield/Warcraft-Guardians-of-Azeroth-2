@@ -17,14 +17,14 @@
 				limit = {
 					$first$ = {
 						OR = {
-							is_elf_trigger = yes
-							is_race_trigger = { RACE = creature_human }
+							has_trait_with_flag = elven_family
+							is_race_no_gene_trigger = { RACE = creature_human }
 						}
 					}
 					$second$ = {
 						OR = {
-							is_elf_trigger = yes
-							is_race_trigger = { RACE = creature_human }
+							has_trait_with_flag = elven_family
+							is_race_no_gene_trigger = { RACE = creature_human }
 						}
 					}
 				}
