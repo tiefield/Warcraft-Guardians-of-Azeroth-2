@@ -1,0 +1,38 @@
+create_artifact_bloodhoof_runespear_effect = {
+	# Get the character the artifact is being made for.
+	$OWNER$ = { save_scope_as = owner }
+
+	set_artifact_rarity_illustrious = yes
+
+	# Create the artifact
+	create_artifact = {	
+		name = bloodhoof_runespear_name
+		description = bloodhoof_runespear_desc
+		type = spear
+		visuals = bloodhoof_runespear
+		wealth = scope:wealth
+		quality = scope:quality
+		history = {
+			type = created
+			date = 582.01.01
+			recipient = character:210000 #Cairne Bloodhoof 27859
+			location = title:d_taurajo.title_province # Bloodhoof Clan
+		}
+		modifier = bloodhoof_runespear
+		save_scope_as = newly_created_artifact
+		decaying = yes
+	}
+
+	scope:newly_created_artifact = {
+		set_variable = { name = historical_unique_artifact value = yes }
+		set_variable = {
+			name = bloodhoof_runespear
+			value = yes
+		}
+		add_artifact_title_history = {
+			target = title:title:d_taurajo # Bloodhoof Clan
+			date = 582.01.01
+		}
+		save_scope_as = illustrous
+	}
+}
