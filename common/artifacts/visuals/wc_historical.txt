@@ -11,7 +11,8 @@ gorehowl = {
 	icon = "wc_gorehowl.dds"
 	#placeholder asset
 	asset = ep1_northern_axe_01_a_portrait_entity
-}doomhammer = {
+}
+doomhammer = {
 	icon = "wc_doomhammer.dds"
-	asset = doomhammer_portrait_entity
+	asset = ep1_mena_hammer_01_a_portrait_entity
 }
