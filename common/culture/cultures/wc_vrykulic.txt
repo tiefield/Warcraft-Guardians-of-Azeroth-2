@@ -27,7 +27,7 @@
 	
 	name_list = name_list_fjorthir
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }
@@ -47,8 +47,15 @@ hyldnir = {
 	traditions = {
 		tradition_nubian_warrior_queens
 		tradition_stand_and_fight
-		tradition_hird
-		tradition_spartan
+		tradition_sacred_mountains
+		tradition_court_eunuchs		#Enslaved Males
+	}
+	
+	# TODO Unique WC Tradition
+	dlc_tradition = {
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
 	}
 	
 	# TODO Unique WC Tradition
@@ -60,7 +67,7 @@ hyldnir = {
 
 	name_list = name_list_fjorthir
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }
@@ -79,9 +86,15 @@ frost_vrykul = {
 	martial_custom = martial_custom_male_only
 	traditions = {
 		tradition_winter_warriors
-		tradition_hird
 		tradition_stand_and_fight
 		tradition_zealous_people
+	}
+	
+	# TODO Unique WC Tradition
+	dlc_tradition = {
+		trait = tradition_fp1_coastal_warriors
+		requires_dlc_flag = the_northern_lords
+		fallback = tradition_hird
 	}
 	
 	# TODO Unique WC Tradition
@@ -93,7 +106,7 @@ frost_vrykul = {
 
 	name_list = name_list_fjorthir
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }
@@ -144,7 +157,7 @@ stormheimir = {
 
 	name_list = name_list_stormheimir
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }
@@ -177,7 +190,7 @@ kvaldir = {
 
 	name_list = name_list_kvaldir
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }
@@ -204,7 +217,7 @@ drust = {
 
 	name_list = name_list_drust
 	
-	coa_gfx = { western_coa_gfx norse_coa_gfx }
+	coa_gfx = { norse_coa_gfx western_coa_gfx }
 	building_gfx = { norse_building_gfx }
 	clothing_gfx = { creature_vrykul_gfx fp1_norse_clothing_gfx northern_clothing_gfx vrykul_beards_gfx }
 	unit_gfx = { norse_unit_gfx }

@@ -12,10 +12,23 @@ tradition_byzantine_succession = {
 	}
 	
 	is_shown = {
+		# Warcraft
 		always = no
+		# End of Warcraft
 	}
 	can_pick = {
+		# Warcraft
 		always = no
+		# End of Warcraft
+		
+		custom_tooltip = {
+			text = cannot_have_tradition_court_eunuchs
+			NOT = { any_in_list = { list = traits this = flag:tradition_court_eunuchs } }
+		}
+		custom_tooltip = {
+			text = cannot_have_tradition_merciful_blindings
+			NOT = { any_in_list = { list = traits this = flag:tradition_merciful_blindings } }
+		}
 	}
 	
 	parameters = {
@@ -25,6 +38,7 @@ tradition_byzantine_succession = {
 		can_appoint_chief_eunuch = yes
 		physical_disfigurement_blocks_inheritance = yes #Actually only blocks claimants and reduce score in elective. Also includes infertility for tooltip reasons.
 		children_can_be_born_in_the_purple = yes
+		disloyal_trait_more_common = yes
 	}
 	character_modifier = {
 		eligible_child_opinion = 20
@@ -53,7 +67,7 @@ tradition_byzantine_succession = {
 					desc = not_courtly_or_communal_desc
 				}
 			}
-			# Warcraft
+			# Warcraft removing
 			
 			multiply = tradition_replacement_cost_if_relevant
 		}
@@ -78,6 +92,7 @@ tradition_lords_of_the_elephant = {
 			desc = tradition_lords_of_the_elephant_regional_desc
 		}
 	}
+	# End of Warcraft
 
 	layers = {
 		0 = learning
@@ -90,21 +105,27 @@ tradition_lords_of_the_elephant = {
 			# Warcraft
 			AND = {
 				any_culture_county = {
-					any_county_province = {
+					title_province = {
 						geographical_region = world_innovation_elephants
 					}
 				}
-				can_get_innovation_elephantry_trigger = yes
+				can_unlock_innovation_elephantry_trigger = yes
 			}
-			can_get_innovation_war_dinosaur_trigger = yes
+			can_unlock_innovation_war_dinosaur_trigger = yes
 			
+			has_innovation = innovation_elephantry
+			has_innovation = innovation_war_dinosaur
+		}
+	}
+	can_pick = {
+		OR = {
 			has_innovation = innovation_elephantry
 			has_innovation = innovation_war_dinosaur
 		}
 	}
 	
 	parameters = {
-		can_recruit_open_specialist = yes
+		can_recruit_jungle_specialist = yes
 		elephant_pens_building_bonuses = yes
 		elephant_bonuses_for_rank_4_education = yes
 	}
@@ -162,7 +183,12 @@ tradition_lords_of_the_elephant = {
 		# Warcraft
 		if = {
 			limit = { 
-				scope:character = { like_elekks_trigger = no }
+				scope:character = { 
+					OR = {
+						like_elekks_trigger = no 
+						can_unlock_innovation_war_dinosaur_trigger = yes
+					}
+				}
 			}
 			multiply = 0
 		}
@@ -365,10 +391,14 @@ tradition_things = {
 	}
 	
 	is_shown = {
+		# Warcraft
 		like_north_germanic_group_trigger = yes
+		#End of Warcraft
 	}
 	can_pick = {
+		# Warcraft
 		like_north_germanic_group_trigger = yes
+		#End of Warcraft
 	}
 	
 	parameters = {
@@ -417,12 +447,15 @@ tradition_things = {
 	
 	ai_will_do = {
 		value = 100
-		if = {
-			limit = {
-				any_in_list = { list = traits this = flag:tradition_the_witenagemot }
-			}
-			multiply = 0
-		}
+		
+		# Warcraft - No  Witenagemot
+		#if = {
+		#	limit = {
+		#		any_in_list = { list = traits this = flag:tradition_the_witenagemot }
+		#	}
+		#	multiply = 0
+		#}
+		# End of Warcraft 
 	}
 }
 
@@ -439,8 +472,10 @@ tradition_caravaneers = {
 		# Warcraft
 		any_culture_county = {
 			title_province = {
-				geographical_region = custom_deserts
-				geographical_region = custom_oasis
+				OR = {
+					geographical_region = custom_deserts
+					geographical_region = custom_oasis
+				}
 			}
 		}
 	}
@@ -467,13 +502,11 @@ tradition_caravaneers = {
 					# Warcraft
 					NOR = {
 						any_in_list = { list = traits this = flag:ethos_egalitarian }
-						any_in_list = { list = traits this = flag:ethos_bureaucratic }
-						any_in_list = { list = traits this = flag:ethos_stoic }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_egalitarian_stoic_or_bureaucratic_desc
+					desc = not_egalitarian_desc
 				}
 			}
 			
@@ -494,30 +527,24 @@ tradition_horse_lords = {
 	}
 
 	is_shown = {
-		OR = {
-			# Warcraft
-			has_cultural_pillar = heritage_yaungolic
-			has_cultural_pillar = heritage_zaetaric
-			has_cultural_pillar = heritage_tharian
-			has_cultural_pillar = heritage_cenaric
-			has_cultural_pillar = heritage_orcish
-		}
+		# Warcraft
+		can_have_tradition_horse_lords_trigger = yes
+		# End of Warcraft
 	}
 	
 	can_pick = {
 		# Warcraft
-		custom_tooltip = {
+		custom_description = {
 			text = culture_title_in_plains_desc
+			always = no
 			any_culture_county = {
-				OR = {
-					any_county_province = {
-						steppe_region_trigger = yes
-					}
-					title_province = {
-						OR = {
-							geographical_region = world_innovation_camels
-							geographical_region = world_kalimdor_central
-						}	
+				percent >= 0.4
+				any_county_province = {
+					OR = {
+						geographical_region = world_innovation_camels
+						geographical_region = world_pandaria_townlong_steppes
+						geographical_region = world_kalimdor_central
+						geographical_region = world_kalimdor_south_thousand_needles
 					}
 				}
 			}
@@ -527,6 +554,7 @@ tradition_horse_lords = {
 	parameters = {
 		# Warcraft
 		# unlock_maa_horse_archers = yes
+		# End of Warcraft
 		can_recruit_open_specialist = yes
 	}
 
@@ -584,6 +612,7 @@ tradition_horse_lords = {
 			}
 			multiply = 0
 		}
+		# End of Warcraft
 	}
 }
 
@@ -599,19 +628,23 @@ tradition_saharan_nomads = {
 	is_shown = {
 		any_culture_county = {
 			title_province = {
+				# Warcraft
 				geographical_region = custom_oasis
-				geographical_region = custom_deserts
+				# End of Warcraft
 			}
 		}
 	}
+	
 	can_pick = {
 		any_culture_county = {
 			title_province = {
+				# Warcraft
 				geographical_region = custom_oasis
-				geographical_region = custom_deserts
+				# End of Warcraft
 			}
 		}
 	}
+	
 	character_modifier = {
 		light_cavalry_maintenance_mult = -0.25
 		light_cavalry_recruitment_cost_mult = -0.25
@@ -633,31 +666,17 @@ tradition_saharan_nomads = {
 			if = {
 				limit = {
 					NOR = {
-						any_in_list = { list = traits this = flag:ethos_communal }
+						any_in_list = { list = traits this = flag:ethos_spiritual }
 						any_in_list = { list = traits this = flag:ethos_stoic }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_stoic_or_communal_desc
+					desc = not_stoic_or_spiritual_desc
 				}
 			}
-			if = {
-				limit = {
-					NOT = {
-						any_culture_county = {
-							title_province = {
-								geographical_region = custom_oasis
-								geographical_region = custom_deserts
-							}
-						}
-					}
-				}
-				add = {
-					value = tradition_unfulfilled_criteria_penalty
-					desc = culture_in_desert_oasis_percentage_desc
-				}
-			}
+			# Warcraft - Removing
+			# End of Warcraft
 			
 			multiply = tradition_replacement_cost_if_relevant
 		}
@@ -666,97 +685,9 @@ tradition_saharan_nomads = {
 	ai_will_do = { value = 100 }
 }
 
-# tradition_visigothic_codes = {
-	# category = regional
-
-	# layers = {
-		# 0 = intrigue
-		# 1 = mediterranean
-		# 4 = crown.dds
-	# }
-	
-	# is_shown = {
-		# any_parent_culture_or_above = {
-			# OR = {
-				# this = culture:visigothic
-				# this = culture:basque
-			# }
-		# }
-	# }
-	# can_pick = {
-		# any_parent_culture_or_above = {
-			# OR = {
-				# this = culture:visigothic
-				# this = culture:basque
-			# }
-		# }
-		# scope:character = {
-			# like_christianity_religion_trigger = yes #The Visigothic code is strongly associated with Christian canon law.
-		# }
-	# }
-
-	# parameters = {
-		# can_enact_high_partition_succession_law = yes
-		# gender_equal_inheritance = yes
-	# }
-	
-	# cost = {
-		# prestige = {
-			# add = {
-				# value = tradition_base_cost
-				# desc = BASE
-				# format = "BASE_VALUE_FORMAT"
-			# }
-			# if = {
-				# limit = {
-					# NOT = {
-						# any_in_list = { list = traits this = flag:ethos_egalitarian }
-					# }
-				# }
-				# add = {
-					# value = tradition_incompatible_ethos_penalty
-					# desc = not_egalitarian_desc
-				# }
-			# }
-			# if = {
-				# limit = {
-					# trigger_if = {
-						# limit = {
-							# scope:character = {
-								# is_ai = no
-							# }
-						# }
-						# NAND = {
-							# any_ruler = {
-								# count >= 3
-								# culture = prev
-								# primary_title.tier >= tier_county
-								# is_male = yes
-							# }
-							# any_ruler = {
-								# count >= 3
-								# culture = prev
-								# primary_title.tier >= tier_county
-								# is_female = yes
-							# }
-						# }
-					# }
-					# trigger_else = {
-						# always = yes
-					# }
-				# }
-				# add = {
-					# value = tradition_unfulfilled_criteria_penalty
-					# desc = three_gender_rulers_desc
-				# }
-			# }
-			
-			# multiply = tradition_replacement_cost_if_relevant
-		# }
-	# }
-	
-	# ai_will_do = { value = 100 }
-# }
+# Warcraft
+# tradition_visigothic_codes = {}
+# End of Warcraft
 
 tradition_himalayan_settlers = {
 	category = regional
@@ -769,18 +700,18 @@ tradition_himalayan_settlers = {
 	
 	is_shown = { #Replaces Mountain Homes
 		# Warcraft
-		this = culture:grummle
+		like_heritage_tibetan_trigger = yes
+		NOT = { has_cultural_tradition = tradition_mountain_homes }
+		# End of Warcraft
+	}
+	can_pick = {
+		# Warcraft
 		any_culture_county = {
 			title_province = {
 				geographical_region = world_pandaria_north
 			}
 		}
-	}
-	can_pick = {
-		# Warcraft
-		any_culture_county = {
-			title_province = { terrain = mountains }
-		}
+		# End of Warcraft
 	}
 
 	parameters = {
@@ -810,14 +741,15 @@ tradition_himalayan_settlers = {
 					NOR = {
 						any_in_list = { list = traits this = flag:ethos_spiritual }
 						any_in_list = { list = traits this = flag:ethos_communal }
-						any_in_list = { list = traits this = flag:ethos_stoic }
 					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_communal_spiritual_or_stoic_desc
+					desc = not_communal_or_spiritual_desc
 				}
 			}
+			# Warcraft - Removing
+			# End of Warcraft
 			
 			multiply = tradition_replacement_cost_if_relevant
 		}
@@ -830,8 +762,11 @@ tradition_himalayan_settlers = {
 				NOT = {
 					scope:character = {
 						any_sub_realm_county = {
+							percent >= 0.4
 							title_province = {
+								# Warcraft
 								geographical_region = world_pandaria_north
+								# End of Warcraft
 							}
 						}
 					}
@@ -854,19 +789,17 @@ tradition_desert_nomads = {
 	is_shown = {
 		# Warcraft
 		any_culture_county = {
-			title_province = { 
-				geographical_region = world_innovation_camels 
-				geographical_region = world_kalimdor_south_silithus 
-			}
-		}	
+			title_province = { geographical_region = world_innovation_camels }
+		}
+		# End of Warcraft
 	}
-	
 	can_pick = {
-		# Warcraft
-		any_culture_county = {
-			title_province = { 
-				geographical_region = world_innovation_camels 
-				geographical_region = world_kalimdor_south_silithus 
+		custom_tooltip = {
+			text = culture_in_camel_region_desc
+			any_culture_county = {
+				any_county_province = {
+					geographical_region = world_innovation_camels
+				}
 			}
 		}
 	}
@@ -906,9 +839,8 @@ tradition_desert_nomads = {
 					NOT = {
 						any_culture_county = {
 							percent >= camel_percentage_multiplier_value
-							title_province = {
-								geographical_region = world_innovation_camels 
-								geographical_region = world_kalimdor_south_silithus 
+							any_county_province = {
+								geographical_region = world_innovation_camels
 							}
 						}
 					}
@@ -931,8 +863,12 @@ tradition_desert_nomads = {
 					scope:character = {
 						any_sub_realm_county = {
 							title_province = {
-								geographical_region = world_innovation_camels 
-								geographical_region = world_kalimdor_south_silithus 
+								OR = {
+									geographical_region = world_innovation_camels
+									# Warcraft
+									geographical_region = world_kalimdor_south_silithus
+									# End of Warcraft
+								}
 							}
 						}
 					}
@@ -958,33 +894,43 @@ tradition_mountaineer_ruralism = {
 			has_cultural_pillar = heritage_northern
 			any_culture_county = {
 				title_province = { 
-					geographical_region = world_northrend 
+					geographical_region = world_northrend_grizzly_hills 
+				}
+			}
+		}
+		# End of Warcraft
+	}
+	
+	can_pick = {
+		NOT = {
+			has_cultural_tradition = tradition_mountain_homes
+		}
+		custom_description = {
+			text = culture_in_mountains_desc
+			any_culture_county = {
+				any_county_province = {
+					OR = {
+						terrain = mountains
+						terrain = desert_mountains
+					}
 				}
 			}
 		}
 	}
 	
-	can_pick = {
-		custom_description = {
-			text = culture_in_hills_desc
-			any_culture_county = {
-				percent >= 0.5
-				any_county_province = { terrain = hills }
-			}
-		}
-	}
-	
 	parameters = {
+		# Warcraft
 		# unlock_maa_zbrojnosh = yes
+		# End of Warcraft
 		hill_farms_building_bonuses = yes
 		rough_terrain_expert_trait_more_common = yes
-		hill_trait_bonuses = yes
-		can_recruit_hill_specialist = yes
+		mountain_trait_bonuses = yes
+		can_recruit_mountain_specialist = yes
 	}
 
 	county_modifier = {
 		hills_development_growth_factor = 0.1
-		taiga_development_growth_factor = 0.1
+		mountains_development_growth_factor = 0.1
 	}
 	
 	cost = {
@@ -996,9 +942,8 @@ tradition_mountaineer_ruralism = {
 			}
 			if = {
 				limit = {
-					NOR = {
+					NOT = {
 						any_in_list = { list = traits this = flag:ethos_stoic }
-						any_in_list = { list = traits this = flag:ethos_communal }
 					}
 				}
 				add = {
@@ -1006,6 +951,23 @@ tradition_mountaineer_ruralism = {
 					desc = not_stoic_desc
 				}
 			}
+			if = {
+				limit = {
+					NOT = {
+						any_culture_county = {
+							percent >= 0.3
+							any_county_province = {
+								terrain = mountains
+							}
+						}
+					}
+				}
+				add = {
+					value = tradition_unfulfilled_criteria_penalty
+					desc = mountain_true_percentage_desc
+				}
+			}
+			
 			multiply = tradition_replacement_cost_if_relevant
 		}
 	}
@@ -1018,8 +980,12 @@ tradition_mountaineer_ruralism = {
 					scope:character = {
 						any_sub_realm_county = {
 							culture = scope:character.culture
-							percent >= 0.5
-							any_county_province = { terrain = hills }
+							any_county_province = {
+								OR = {
+									terrain = mountains
+									terrain = hills
+								}
+							}
 						}
 					}
 				}
@@ -1120,17 +1086,13 @@ tradition_nubian_warrior_queens = {
 	}
 	
 	is_shown = {
-		OR = {
-			has_cultural_pillar = heritage_darnassian
-			has_cultural_pillar = heritage_avianic
-			this = culture:shivarra
-			this = culture:hyldnir
-			this = culture:blood_troll
-			this = culture:mantid
-		}
+		# Warcraft
+		culture_prefer_female_warriors_trigger = yes
+		# End of Warcraft
 	}
 	
 	can_pick = {
+		# Warcraft
 		custom_tooltip = {
 			text = female_preference_law_faith_or_culture_trigger
 			
@@ -1148,6 +1110,7 @@ tradition_nubian_warrior_queens = {
 				}
 			}
 		}
+		# End of Warcraft
 	}
 
 	parameters = {
@@ -1166,13 +1129,13 @@ tradition_nubian_warrior_queens = {
 			}
 			if = {
 				limit = {
-					any_in_list = { list = traits this = flag:ethos_courtly }
-					any_in_list = { list = traits this = flag:ethos_egalitarian }
-					any_in_list = { list = traits this = flag:ethos_bureaucratic }
+					NOT = {
+						any_in_list = { list = traits this = flag:ethos_egalitarian }
+					}
 				}
 				add = {
 					value = tradition_incompatible_ethos_penalty
-					desc = not_bellicose_stoic_or_communal_desc
+					desc = not_egalitarian_desc
 				}
 			}
 			if = {
@@ -1212,19 +1175,5 @@ tradition_nubian_warrior_queens = {
 		}
 	}
 	
-	ai_will_do = { 
-		value = 100
-		if = {
-			limit = {
-				OR = { 
-					any_in_list = { list = traits this = flag:ethos_courtly }
-					any_in_list = { list = traits this = flag:ethos_egalitarian }
-					any_in_list = { list = traits this = flag:ethos_bureaucratic }
-					
-					scope:character = { is_male = yes }
-				}
-			}
-			multiply = 0
-		}
-	}
+	ai_will_do = { value = 100 }
 }
