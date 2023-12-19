@@ -1335,13 +1335,13 @@ special_genes = {
 				boy = male
 				girl = female
 			}
-			artifact_tauren_runespear = {
+			artifact_bloodhoof_runespear = {
 				index = 69
 				male = {
-					1 = artifact_tauren_runespear
+					1 = artifact_bloodhoof_runespear
 				}
 				female = {
-					1 = artifact_tauren_runespear
+					1 = artifact_bloodhoof_runespear
 				}
 				boy = male
 				girl = female
