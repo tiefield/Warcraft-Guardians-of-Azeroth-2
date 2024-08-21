@@ -6,6 +6,17 @@ trigger_race_giving_no_gene_effect = {
 }
 trigger_on_game_start_effect = {
 	trigger_event = WCRAC.30
+	if = {
+		limit = { has_variable = give_me_important_lore_character }
+		really_make_important_lore_character_effect = yes
+	}
+	if = {
+		limit = {
+			has_variable = block_union
+			# always = yes
+		}
+		really_block_character_unions_effect = yes
+	}
 }
 
 try_to_set_race_effect = {
@@ -451,6 +462,14 @@ try_to_set_race_effect = {
 		limit = { is_race_no_gene_trigger = { RACE = creature_gilblin } }
 		set_race_effect = { RACE = creature_gilblin }
 	}
+	else_if = {
+		limit = { is_race_no_gene_trigger = { RACE = creature_tortollan } }
+		set_race_effect = { RACE = creature_tortollan }
+	}
+	else_if = {
+		limit = { is_race_no_gene_trigger = { RACE = creature_manari } }
+		set_race_effect = { RACE = creature_manari }
+	}
 	else = {
 		debug_log = "(IMPORTANT) Couldn't get race trait."
 		debug_log_scopes = yes
@@ -489,7 +508,6 @@ set_race_effect = {
 			OR = {
 				is_being_gene_trigger = { BEING = being_undead }
 				has_trait_with_flag = undead_class
-				culture = { has_cultural_pillar = heritage_undead } 
 			}
 		}
 		become_undead_no_notification_event_effect = yes
@@ -498,7 +516,6 @@ set_race_effect = {
 		limit = {
 			OR = {
 				is_being_gene_trigger = { BEING = being_demon }
-				has_trait_with_flag = demon_class
 			}
 		}
 		become_demon_effect = yes
@@ -507,11 +524,6 @@ set_race_effect = {
 		limit = {
 			OR = {
 				is_being_gene_trigger = { BEING = being_void }
-				has_trait = creature_naga
-				has_trait = creature_nraqi
-				has_trait = creature_cthraxxi
-				has_trait = creature_qiraji
-				has_trait = creature_mantid
 			}
 		}
 		become_being_void_effect = yes
@@ -520,9 +532,6 @@ set_race_effect = {
 		limit = {
 			OR = {
 				is_being_gene_trigger = { BEING = being_life }
-				has_trait_with_flag = plant_class
-				has_trait = creature_dryad
-				has_trait = creature_frostnymph
 			}
 		}
 		become_being_life_effect = yes
@@ -531,7 +540,6 @@ set_race_effect = {
 		limit = {
 			OR = {
 				is_being_gene_trigger = { BEING = being_order }
-				has_trait_with_flag = titanforged_class
 			}
 		}
 		become_being_order_effect = yes
@@ -557,6 +565,8 @@ set_race_effect = {
 		}
 		remove_trait = scaly
 	}
+
+	add_character_flag = race_giving_fired_flag
 }
 copy_race_effect = {
 	# Add new races always at the end

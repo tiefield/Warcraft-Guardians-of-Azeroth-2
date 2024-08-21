@@ -18,6 +18,15 @@
 	589.11.1={
 		culture=dalaranian
 		religion=kirin_tor
+		holding = castle_holding
+	}
+	589.11.2 = {
+		buildings = {
+			castle_02
+			barracks_01
+			smiths_01
+			#caster_college_01
+		}
 	}
 }
 
@@ -199,6 +208,9 @@
 	}
 	603.1.1={
 		culture=naga
+		religion=neptulon_worship
+	}
+	611.1.1={
 		religion=nzoth_worship
 	}
 }
@@ -263,12 +275,9 @@
 		religion=kirin_tor
 	}
 	603.1.1={
+		holding = tribal_holding
 		culture=murloc
-		religion=water_deities
-	}
-	611.1.1={
-		culture=naga
-		religion=nzoth_worship
+		religion=neptulon_worship
 	}
 }
 

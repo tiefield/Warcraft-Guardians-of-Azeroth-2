@@ -1,7 +1,7 @@
 ﻿static_model = {
 	usage = game
 	selection_behavior = max
-	
+
 	static_murloc = {
 		dna_modifiers = {
 			accessory = {
@@ -169,7 +169,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_arakkoa_corrupted }
+				has_arakkoa_corrupted_portrait_trigger = yes
 			}
 		}
 	}
@@ -186,7 +186,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_mantid }
+				has_mantid_portrait_trigger = yes
 			}
 		}
 	}
@@ -209,7 +209,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_annihilan }
+				has_annihilan_portrait_trigger = yes
 			}
 		}
 	}
@@ -226,7 +226,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_observer }
+				has_observer_portrait_trigger = yes
 			}
 		}
 	}
@@ -249,7 +249,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_eredruin }
+				has_eredruin_portrait_trigger = yes
 			}
 		}
 	}
@@ -272,7 +272,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_qiraji }
+				has_qiraji_portrait_trigger = yes
 			}
 		}
 	}
@@ -295,7 +295,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_qiraji }
+				has_qiraji_portrait_trigger = yes
 				this = character:240001
 			}
 		}
@@ -319,7 +319,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_qiraji }
+				has_qiraji_portrait_trigger = yes
 				this = character:240000
 			}
 		}
@@ -344,7 +344,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_nerubian }
+				has_nerubian_portrait_trigger = yes
 			}
 		}
 	}
@@ -367,7 +367,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_nerubian }
+				has_nerubian_portrait_trigger = yes
 				portrait_has_trait_trigger = { TRAIT = being_undead }
 			}
 		}
@@ -392,7 +392,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_nraqi }
+				has_nraqi_portrait_trigger = yes
 			}
 		}
 	}
@@ -415,7 +415,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_cthraxxi }
+				has_cthraxxi_portrait_trigger = yes
 			}
 		}
 	}
@@ -451,7 +451,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_hozen }
+				has_hozen_portrait_trigger = yes
 			}
 		}
 	}
@@ -469,32 +469,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_jinyu }
-			}
-		}
-	}
-
-	static_mogu = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_mogumale
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = static_hairstyles
-				template = mogu_hairstyles
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = no
-				is_race_no_gene_trigger = { RACE = creature_mogu }
+				has_jinyu_portrait_trigger = yes
 			}
 		}
 	}
@@ -512,7 +487,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_centaur }
+				has_centaur_portrait_trigger = yes
 			}
 		}
 	}
@@ -530,7 +505,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_dryad }
+				has_dryad_portrait_trigger = yes
 			}
 		}
 	}
@@ -548,7 +523,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_sethrak }
+				has_sethrak_portrait_trigger = yes
 			}
 		}
 	}
@@ -566,7 +541,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_magnataur }
+				has_magnataur_portrait_trigger = yes
 			}
 		}
 	}
@@ -584,7 +559,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_wolvar }
+				has_wolvar_portrait_trigger = yes
 			}
 		}
 	}
@@ -602,7 +577,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_gorloc }
+				has_gorloc_portrait_trigger = yes
 			}
 		}
 	}
@@ -620,7 +595,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_gnoll }
+				has_gnoll_portrait_trigger = yes
 			}
 		}
 	}
@@ -638,401 +613,203 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_gnoll }
+				has_gnoll_portrait_trigger = yes
 				portrait_has_trait_trigger = { TRAIT = being_undead }
 			}
 		}
 	}
 
-	static_stonegiant = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_stonegiant
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = giant_height
-				value = 1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 300
-				has_culture = culture:storm_giant
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:archavon
-			}
-		}
-	}
+	#static_stonegiant = {
+	#	dna_modifiers = {
+	#		accessory = {
+	#			mode = add
+	#			gene = static_model
+	#			template = static_stonegiant
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		morph = {
+	#			mode = modify
+	#			gene = gene_height
+	#			template = giant_height
+	#			value = 1
+	#		}
+	#	}	
+	#	weight = {
+	#		base = 0
+	#		modifier = {
+	#			add = 300
+	#			has_culture = culture:storm_giant
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#		modifier = {
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:archavon
+	#		}
+	#	}
+	#}
 
-	static_frostgiant = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_frostgiant
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = frostgiant_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = giant_height
-				value = 1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 300
-				has_culture = culture:frozen_giant
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:290000 # King Jokkum
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:toravon # Toravon the Ice Watcher
-			}
-			modifier = {
-				add = 200
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-		}
-	}
+	#static_frostgiant = {
+	#	dna_modifiers = {
+	#		accessory = {
+	#			mode = add
+	#			gene = static_model
+	##			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		accessory = {
+	#			mode = add
+	#			gene = clothes
+	#			template = frostgiant_clothes
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		morph = {
+	#			mode = modify
+	#			gene = gene_height
+	#			template = giant_height
+	#			value = 1
+	#		}
+	#	}	
+	#	weight = {
+	#		base = 0
+	#		modifier = {
+	#			add = 300
+	#			has_culture = culture:frozen_giant
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#		modifier = {
+	#			add = 400
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:290000 # King Jokkum
+	#		}
+	#		modifier = {
+	#			add = 400
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:toravon # Toravon the Ice Watcher
+	#		}
+	#		modifier = {
+	#			add = 200
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#	}
+	#}
 
-	static_firegiant = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_firegiant
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = firegiant_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = giant_height
-				value = 1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 300
-				has_culture = culture:frozen_giant
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:koralon # Koralon the Flame Watcher
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:ignis_furnacemaster # Koralon the Flame Watcher
-			}
-			modifier = {
-				add = 200
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-		}
-	}
+	#static_firegiant = {
+	#	dna_modifiers = {
+	#		accessory = {
+	#			mode = add
+	#			gene = static_model
+	#			template = static_firegiant
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		accessory = {
+	#			mode = add
+	#			gene = clothes
+	#			template = firegiant_clothes
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		morph = {
+	#			mode = modify
+	#			gene = gene_height
+	#			template = giant_height
+	#			value = 1
+	#		}
+	#	}	
+	#	weight = {
+	#		base = 0
+	#		modifier = {
+	#			add = 300
+	#			has_culture = culture:frozen_giant
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#		modifier = {
+	#			add = 400
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:koralon # Koralon the Flame Watcher
+	#		}
+	#		modifier = {
+	#			add = 400
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:ignis_furnacemaster # Koralon the Flame Watcher
+	#		}
+	#		modifier = {
+	#			add = 200
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#	}
+	#}
 
-	static_irongiant = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_irongiant
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = giant_height
-				value = 1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 300
-				has_culture = culture:storm_giant
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-			modifier = {
-				add = 400
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:emalon # Emalon the Storm Watcher
-			}
-			modifier = {
-				add = 200
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-		}
-	}
+	#static_irongiant = {
+	#	dna_modifiers = {
+	#		accessory = {
+	#			mode = add
+	#			gene = static_model
+	#			template = static_irongiant
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		morph = {
+	#			mode = modify
+	#			gene = gene_height
+	#			template = giant_height
+	#			value = 1
+	#		}
+	#	}	
+	#	weight = {
+	#		base = 0
+	#		modifier = {
+	#			add = 300
+	#			has_culture = culture:storm_giant
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#		modifier = {
+	#			add = 400
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:emalon # Emalon the Storm Watcher
+	#		}
+	#		modifier = {
+	#			add = 200
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#	}
+	#}
 
-	static_stormgiant = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_stormgiant
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = stormgiant_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			morph = {
-				mode = modify
-				gene = gene_height
-				template = giant_height
-				value = 1
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 300
-				has_culture = culture:storm_giant
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-			modifier = {
-				add = 2001
-				is_race_no_gene_trigger = { RACE = creature_giant }
-				this = character:440001 # Gymer
-			}
-			modifier = {
-				add = 200
-				is_race_no_gene_trigger = { RACE = creature_giant }
-			}
-		}
-	}
-
-	static_titanwatcher_01 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_titanwatcher
-				range = 0 #titanmale01
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = titanwatcher_clothes
-				range = 0 #titanmalearmor01
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-			}
-		}
-	}
-
-	static_titanwatcher_gold = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_titanwatcher
-				range = 0.329 #titanmalegold
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = titanwatcher_clothes
-				range = 0.329 #titanmalearmorgold
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-			}
-			modifier = {
-				add = 200
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-				this = character:400501 # Loken
-			}
-		}
-	}
-
-	static_titanwatcher_ivory = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_titanwatcher
-				range = 0.718 #titanmaleivory
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = titanwatcher_clothes
-				range = 0.718 #titanmalearmorivory
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-			}
-		}
-	}
-
-	static_titanwatcher_stone = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_titanwatcher
-				range = 1 #titanmalestone
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = titanwatcher_clothes
-				range = 1 #titanmalearmorstone
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-			}
-		}
-	}
-
-	static_titanwatcher_female = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_titanwatcher
-				range = { 0 1 }
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 200
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-			}
-		}
-	}
-
-	static_freya = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_freya
-				range = { 0 1 }
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = freya_clothes
-				range = { 0 1 }
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 250
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-				this = character:400504 # Freya
-			}
-		}
-	}
-
-	static_thorim = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_thorim
-				range = { 0 1 }
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = thorim_clothes
-				range = { 0 1 }
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 250
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-				this = character:400502 # Thorim
-			}
-		}
-	}
-
-	static_hodir = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_hodir
-				range = { 0 1 }
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = hodir_clothes
-				range = { 0 1 }
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 250
-				is_race_no_gene_trigger = { RACE = creature_watcher }
-				this = character:400503 # Hodir
-			}
-		}
-	}
+	#static_stormgiant = {
+	#	dna_modifiers = {
+	#		accessory = {
+	#			mode = add
+	#			gene = static_model
+	#			template = static_stormgiant
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		accessory = {
+	#			mode = add
+	#			gene = clothes
+	#			template = stormgiant_clothes
+	#			range = { 0 1 } # For the randomness to work correctly
+	#		}
+	#		morph = {
+	#			mode = modify
+	#			gene = gene_height
+	#			template = giant_height
+	#			value = 1
+	#		}
+	#	}	
+	#	weight = {
+	#		base = 0
+	#		modifier = {
+	#			add = 300
+	#			has_culture = culture:storm_giant
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#		modifier = {
+	#			add = 2001
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#			this = character:440001 # Gymer
+	#		}
+	#		modifier = {
+	#			add = 200
+	#			is_race_no_gene_trigger = { RACE = creature_giant }
+	#		}
+	#	}
+	#}
 	
 	static_frostnymph_01 = {
 		dna_modifiers = {
@@ -1053,7 +830,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_frostnymph }
+				has_frostnymph_portrait_trigger = yes
 			}
 		}
 	}
@@ -1071,7 +848,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_frostnymph }
+				has_frostnymph_portrait_trigger = yes
 			}
 		}
 	}
@@ -1095,7 +872,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_mechagnome }
+				has_mechagnome_portrait_trigger = yes
 			}
 		}
 	}
@@ -1119,7 +896,7 @@
 			base = 0
 			modifier = {
 				add = 2000
-				is_race_no_gene_trigger = { RACE = creature_mechagnome }
+				has_mechagnome_portrait_trigger = yes
 				this = character:400505 # Mimiron
 			}
 		}
@@ -1150,7 +927,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1180,7 +957,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1210,7 +987,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1240,7 +1017,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1270,7 +1047,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1300,7 +1077,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1330,7 +1107,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1360,132 +1137,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_vulpera }
-			}
-		}
-	}
-
-	static_femalemogu01 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_femalemogu01
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = femalemogu01_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_mogu }
-			}
-		}
-	}
-
-	static_femalemogu02 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_femalemogu02
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = femalemogu02_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_mogu }
-			}
-		}
-	}
-
-	static_femalemogu03 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_femalemogu03
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = femalemogu03_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_mogu }
-			}
-		}
-	}
-
-	static_femalemogu04 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_femalemogu04
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = femalemogu04_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_mogu }
-			}
-		}
-	}
-
-	static_femalemogu05 = {
-		dna_modifiers = {
-			accessory = {
-				mode = add
-				gene = static_model
-				template = static_femalemogu05
-				range = { 0 1 } # For the randomness to work correctly
-			}
-			accessory = {
-				mode = add
-				gene = clothes
-				template = femalemogu05_clothes
-				range = { 0 1 } # For the randomness to work correctly
-			}
-		}	
-		weight = {
-			base = 0
-			modifier = {
-				add = 100
-				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_mogu }
+				has_vulpera_portrait_trigger = yes
 			}
 		}
 	}
@@ -1503,7 +1155,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_saurok }
+				has_saurok_portrait_trigger = yes
 			}
 		}
 	}
@@ -1557,10 +1209,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1615,10 +1264,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1673,10 +1319,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-               		 is_race_no_gene_trigger = { RACE = creature_tauren }
-                	 is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1731,10 +1374,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1789,10 +1429,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-               	 	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1847,10 +1484,7 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -1906,10 +1540,7 @@
 			modifier = {
 				add = 100
 				is_female = no
-				OR = { 
-						is_race_no_gene_trigger = { RACE = creature_tauren }
-						is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-					}
+				has_tauren_portrait_trigger = yes
 					age >= 10
 			}
 		}
@@ -1964,10 +1595,8 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -2022,10 +1651,8 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-               		is_race_no_gene_trigger = { RACE = creature_tauren }
-               		is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -2080,10 +1707,8 @@
             base = 0
             modifier = {
                 add = 100
-                OR = { 
-                	is_race_no_gene_trigger = { RACE = creature_tauren }
-                	is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
-                }
+
+				has_tauren_portrait_trigger = yes
                 age >= 10
             }
         }
@@ -2105,10 +1730,9 @@
 			modifier = {
 				add = 100
 				OR = {
-					is_race_no_gene_trigger = { RACE = creature_tauren }
-					is_race_no_gene_trigger = { RACE = creature_taunka }
-					is_race_no_gene_trigger = { RACE = creature_yaungol }
-					is_race_no_gene_trigger = { RACE = creature_highmountain_tauren }
+					has_tauren_portrait_trigger = yes
+					has_taunka_portrait_trigger = yes
+					has_yaungol_portrait_trigger = yes
 				}
 				age <= 9
 			}
@@ -2167,7 +1791,7 @@
 			modifier = {
 				add = 250
 				this = character:210000 # Cairne
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2223,7 +1847,7 @@
 			modifier = {
 				add = 250
 				this = character:210001 # Baine
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2273,7 +1897,7 @@
 			modifier = {
 				add = 250
 				this = character:210049 # Magatha Grimtotem
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2329,7 +1953,7 @@
 			modifier = {
 				add = 250
 				this = character:210033 # Hamuul Runeotem
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2385,7 +2009,7 @@
 			modifier = {
 				add = 250
 				this = character:2100888 # Fleet Master Seahorn
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2411,7 +2035,7 @@
 			modifier = {
 				add = 200
 				is_female = no
-				is_race_no_gene_trigger = { RACE = creature_taunka }
+				has_taunka_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2461,7 +2085,7 @@
 			modifier = {
 				add = 200
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_taunka }
+				has_taunka_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2511,7 +2135,7 @@
 			modifier = {
 				add = 200
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_taunka }
+				has_taunka_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2561,7 +2185,7 @@
 			modifier = {
 				add = 200
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_taunka }
+				has_taunka_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2611,7 +2235,7 @@
 			modifier = {
 				add = 200
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_taunka }
+				has_taunka_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -2655,7 +2279,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2692,7 +2316,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2729,7 +2353,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2766,7 +2390,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2803,7 +2427,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2840,7 +2464,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2877,7 +2501,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2914,7 +2538,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2951,7 +2575,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -2985,7 +2609,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3016,7 +2640,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3047,7 +2671,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3078,7 +2702,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3109,7 +2733,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3140,7 +2764,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3171,7 +2795,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3202,7 +2826,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3233,7 +2857,7 @@
 			modifier = {
 				add = 200
 				age > 17
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3285,7 +2909,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3333,7 +2957,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3381,7 +3005,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3429,7 +3053,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3477,7 +3101,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3525,7 +3149,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3573,7 +3197,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3621,7 +3245,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3669,7 +3293,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_grummle }
+				has_grummle_portrait_trigger = yes
 			}
 		}
 	}
@@ -3714,7 +3338,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3758,7 +3382,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3802,7 +3426,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3846,7 +3470,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3890,7 +3514,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3934,7 +3558,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -3979,7 +3603,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4023,7 +3647,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4067,7 +3691,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4111,7 +3735,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4155,7 +3779,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4199,7 +3823,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4243,7 +3867,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4287,7 +3911,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4331,7 +3955,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4375,7 +3999,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4419,7 +4043,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4463,7 +4087,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4507,7 +4131,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4551,7 +4175,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4595,7 +4219,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4639,7 +4263,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4683,7 +4307,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4727,7 +4351,7 @@
 			base = 0
 			modifier = {
 				add = 200
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4771,7 +4395,7 @@
 			modifier = {
 				add = 250
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4815,7 +4439,7 @@
 			modifier = {
 				add = 250
 				is_female = yes
-				is_race_no_gene_trigger = { RACE = creature_yaungol }
+				has_yaungol_portrait_trigger = yes
 				age >= 10
 			}
 		}
@@ -4834,7 +4458,7 @@
 			base = 0
 			modifier = {
 				add = 100
-				is_race_no_gene_trigger = { RACE = creature_lich }
+				has_lich_portrait_trigger = yes
 			}
 		}
 	}
@@ -4852,7 +4476,7 @@
 			base = 0
 			modifier = {
 				add = 120
-				is_race_no_gene_trigger = { RACE = creature_lich }
+				has_lich_portrait_trigger = yes
 				highest_held_title_tier >= tier_duchy
 			}
 		}
@@ -4871,7 +4495,7 @@
 			base = 0
 			modifier = {
 				add = 150
-				is_race_no_gene_trigger = { RACE = creature_lich }
+				has_lich_portrait_trigger = yes
 				is_kelthuzad_trigger = yes		
 			}
 		}
@@ -4891,6 +4515,493 @@
 			modifier = {
 				add = 250
 				culture = { has_clothing_gfx = blood_elven_clothing_gfx }
+			}
+		}
+	}
+
+	static_tortollan_green = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_green
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_tortollan_portrait_trigger = yes
+			}
+		}
+	}
+
+	static_tortollan_grey = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_grey
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_tortollan_portrait_trigger = yes
+			}
+		}
+	}
+
+	static_tortollan_brown = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_brown
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_tortollan_portrait_trigger = yes
+			}
+		}
+	}
+
+	static_tortollan_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 100
+				has_tortollan_portrait_trigger = yes
+			}
+		}
+	}
+
+	# Scripted Tortollan Appearances
+
+	## Brown Tortollans
+
+	static_tortollan0_brown = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_brown
+				value = 0
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:scrollsage_nola # Scrollsage Nola
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:chronicler_shoopa # Chronicler Shoopa
+			}
+		}
+	}
+
+	static_tortollan2_brown = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_brown
+				value = 0.482
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:batu_tortollan # Batu
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:chaka_the_ancient # Chaka the Ancient
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:choa_tortollan # Choa
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:wahla_tortollan # Wahla
+			}
+		}
+	}
+
+	static_tortollan3_brown = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_brown
+				value = 0.698
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:lashk_tortollan # Lashk
+			}
+		}
+	}
+
+	static_tortollan4_brown = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_brown
+				value = 1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:rauloo_the_hardened # Rauloo the Hardened
+			}
+		}
+	}
+
+	## Green Tortollans
+
+	static_tortollan0_green = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_green
+				value = 0
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:jol_the_ancient # Jol the Ancinet
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:elder_kuppaka # Elder Kuppaka
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:patu_tortollan # Patu
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:akru_tortollan # Akru
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:kajosh_tortollan # Kajosh
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:scrollsage_rooka # Scrollsage Rooka
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:umbra_tortollan # Spiritsinger Umbra
+			}
+		}
+	}
+
+	static_tortollan2_green = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_green
+				value = 0.482
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:ludwig_von_tortollan # Ludwig Von Tortollan
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:majo_tortollan # Majo
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:teekcha_tortollan # Teekcha
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:crosh_tortollan # Crosh
+			}
+		}
+	}
+
+	static_tortollan3_green = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_green
+				value = 0.698
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:collector_kojo # Collector Kojo
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:torka_tortollan # Torka
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:kurtu_tortollan # Kurtu
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:deyon_tortollan # Deyon
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:trader_nog # Trader Nog
+			}
+		}
+	}
+
+	static_tortollan4_green = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_green
+				value = 1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:gurtuk_hardshell # Gurtuk Hardshell
+			}
+		}
+	}
+
+	## Blue Tortollan
+
+	static_tortollan0_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				value = 0
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:maedin_tortollan # Maedin
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:tukuku_tortollan # Tukuku
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:tiang_tortollan # Tiang
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:hansa_tortollan # Hansa
+			}
+		}
+	}
+
+	static_tortollan1_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				value = 0.310
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:shalo_tortollan # Shalo
+			}
+		}
+	}
+
+	static_tortollan2_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				value = 0.482
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:churka_tortollan # Churka
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:tulu_tortollan # Tulu
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:kono_tortollan # Kono
+			}
+		}
+	}
+
+	static_tortollan3_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				value = 0.698
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:tuka_tortollan # Tuka
+			}
+		}
+	}
+
+	static_tortollan4_blue = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_blue
+				value = 1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:kisha_tortollan # Kisha
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:soola_hardshell # Soola Hardshell
+			}
+		}
+	}
+
+	## Grey Tortollans
+
+	static_tortollan3_grey = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_grey
+				value = 0.698
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:roko_tortollan # Roko
+			}
+		}
+	}
+
+	static_tortollan4_grey = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = static_model
+				template = static_tortollan_grey
+				value = 1
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:toki_tortollan # Toki
+			}
+			modifier = {
+				add = 200
+				has_tortollan_portrait_trigger = yes
+				this = character:tooka_hardshell # Tooka Hardshell
 			}
 		}
 	}
@@ -4914,7 +5025,7 @@ static_extra = {
 			modifier = {
 				add = 5
 				has_trait = blind
-				is_race_no_gene_trigger = { RACE = creature_tauren }
+				has_tauren_portrait_trigger = yes
 			}
 		}
 	}

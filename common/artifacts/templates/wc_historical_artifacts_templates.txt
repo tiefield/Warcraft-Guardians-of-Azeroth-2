@@ -27,6 +27,7 @@ gorehowl_template = {
 
 	unique = yes
 }
+
 dark_crystal_template = {
 	can_equip = {
 	}
@@ -41,6 +42,30 @@ dark_crystal_template = {
 
 	unique = yes
 }
+
+hammer_of_twilight_template = {
+	can_equip = {
+		faith.religion = religion:shathgral
+	}
+
+	# can this character benefit from the full modifiers of the artifact?
+	can_benefit = {
+		#ToDo add some way for void users to control the maddening whisphers
+	}
+
+	# if a given character does not pass the "can_benefit" trigger then this modifier will be applied instead.
+	fallback = {
+	}
+
+	unique = yes
+}
+
+book_of_medivh_template = {
+	can_equip = {
+		always = yes
+	}
+}
+
 bloodhoof_runespear_template = {
 		can_equip = {
 	}
