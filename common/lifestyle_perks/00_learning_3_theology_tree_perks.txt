@@ -28,7 +28,7 @@
 	
 	doctrine_character_modifier = {
 		doctrine = doctrine_theocracy_lay_clergy
-		same_faith_opinion = 5
+		zealot_opinion = 10
 	}
 	doctrine_character_modifier = {
 		doctrine = doctrine_theocracy_temporal
@@ -165,6 +165,12 @@ defender_of_the_faith_perk = {
 	parent = prophet_perk
 	
 	doctrine_character_modifier = {
+		doctrine = doctrine_pluralism_dark
+		tolerance_advantage_mod = 10
+		prowess_per_piety_level = 2
+		clergy_opinion = 20
+	}
+	doctrine_character_modifier = {
 		doctrine = doctrine_pluralism_fundamentalist
 		tolerance_advantage_mod = 10
 		prowess_per_piety_level = 2
@@ -172,7 +178,7 @@ defender_of_the_faith_perk = {
 	}
 	doctrine_character_modifier = {
 		doctrine = doctrine_pluralism_righteous
-		same_faith_opinion = 5
+		zealot_opinion = 10
 		tyranny_gain_mult = -0.25
 	}
 	doctrine_character_modifier = {

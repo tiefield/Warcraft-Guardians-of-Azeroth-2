@@ -2,7 +2,7 @@
 	color = { 51 102 255 }
 
 	k_stormwind = {
-		color = { 70 70 255 }
+		color = { 15 27 187 }
 	}
 	k_dead_morass = {
 		color = { 31 52 119 }
@@ -30,7 +30,7 @@ e_khaz_modan = {
 	k_gnomeregan = {
 		color = { 255 102 0 }
 	}
-	k_blackrock = {
+	k_shadowforge = {
 		color = { 120 40 40 }
 	}
 	k_wildhammer = {
@@ -43,7 +43,7 @@ e_khaz_modan = {
 		color = { 128 128 0 }
 	}
 }
-e_arathor_empire = {
+e_arathor = {
 	color = { 255 0 0 }
 
 	k_stromgarde = {
@@ -197,7 +197,7 @@ e_storm_peaks = {
 	k_ulduar = {
 		color = { 51 51 153 }
 	}
-	k_adguzus = {
+	k_makers_terrace = {
 		color = { 52 82 178 }
 	}
 	k_storm_peaks = {

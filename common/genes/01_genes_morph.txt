@@ -1473,7 +1473,6 @@ morph_genes = {
 		}
 	}
 
-
 	gene_jaw_width = {
 		ugliness_feature_categories = { chin }
 		group = face
@@ -2867,7 +2866,6 @@ morph_genes = {
 		}
 	}
 
-
 	gene_bs_mouth_philtrum_def = {
 		group = mouth
 		mouth_philtrum_def_pos = { 
@@ -3091,8 +3089,6 @@ morph_genes = {
 		}
 	}
 
-
-
 	gene_bs_nose_forward = {
 	    ugliness_feature_categories = { nose }
 	    group = nose
@@ -3203,7 +3199,6 @@ morph_genes = {
 			}
 		}
 	}
-
 
 	gene_bs_nose_nostril_height = {
 	    ugliness_feature_categories = { nose }
@@ -4145,8 +4140,6 @@ morph_genes = {
 	    
 	}
 
-
-
 	face_detail_eye_lower_lid_def = {
 
 	    group = eyes
@@ -4210,7 +4203,6 @@ morph_genes = {
 	    }
 	    
 	}
-
 
 	face_detail_eye_socket = {
 
@@ -4764,7 +4756,6 @@ morph_genes = {
 	    
 	}
 
-
 	face_detail_nasolabial = {
 
 		group = nose
@@ -4995,7 +4986,6 @@ morph_genes = {
 
 	}
 
-
 	face_detail_nose_ridge_def = {
 
 	    ugliness_feature_categories = { nose }
@@ -5157,7 +5147,6 @@ morph_genes = {
 	    }
 
 	}
-
 
 	expression_brow_wrinkles = {
 
@@ -5873,11 +5862,6 @@ morph_genes = {
 	        }
 	    }
 	}
-
-
-
-
-
 
 	complexion = {
 
@@ -6632,7 +6616,6 @@ morph_genes = {
 	    }
 	}   
 
-
 	gene_height = {
 
 	    can_have_portrait_extremity_shift = no
@@ -6778,7 +6761,6 @@ morph_genes = {
 
 
 	}
-
 
 	gene_bs_body_type = {
 
@@ -11750,7 +11732,6 @@ morph_genes = {
 				}
 			}
 			female = {
-
 				## Children ##
 				setting = {
 					attribute = "head_infant_proportions" 
@@ -14685,8 +14666,8 @@ morph_genes = {
 				setting = { required_tags = "hood_beard" attribute = "bs_hood_beard"  value = { min = 1.0 max = 1.0 }	}
 			}
 			female = { # We're setting blend shapes for cap and crown. They will only have an effect when characters wear head gears. 
-				setting = {required_tags = "cap" 		attribute = "bs_cap"  value = { min = 1.0 max = 1.0 }		}
-				setting = {required_tags = "crown" 		attribute = "bs_crown"  value = { min = 1.0 max = 1.0 }		}
+				setting = {required_tags = "cap,not(fit_under_crown)" 		attribute = "bs_cap"  value = { min = 1.0 max = 1.0 }		}
+				setting = {required_tags = "crown,not(fit_under_crown)"		attribute = "bs_crown"  value = { min = 1.0 max = 1.0 }		}
 				setting = {required_tags = "hat" 		attribute = "bs_hat"  value = { min = 1.0 max = 1.0 }		}
 				setting = {required_tags = "hood" 		attribute = "bs_hood"  value = { min = 1.0 max = 1.0 }		}
 				setting = {required_tags = "helmet" 	attribute = "bs_helmet"  value = { min = 1.0 max = 1.0 }	}
@@ -14708,8 +14689,8 @@ morph_genes = {
 				setting = { required_tags = "hood_beard" attribute = "bs_hood_beard"  value = { min = 1.0 max = 1.0 }	}
 				}
 			female = { # We're setting blend shapes for cap and crown. They will only have an effect when characters wear head gears. 
-				setting = { required_tags = "cap"		attribute = "bs_cap"  value = { min = 1.0 max = 1.0 }		}
-				setting = { required_tags = "crown" 	attribute = "bs_crown"  value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "cap,not(fit_under_crown)" 		attribute = "bs_cap"  value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "crown,not(fit_under_crown)" 	attribute = "bs_crown"  value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hat" 		attribute = "bs_hat"  value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "helmet" 	attribute = "bs_helmet"  value = { min = 1.0 max = 1.0 }	}
 				setting = { required_tags = "hood" 		attribute = "bs_hood"  value = { min = 1.0 max = 1.0 }		}
@@ -14731,8 +14712,8 @@ morph_genes = {
 				setting = { required_tags = "hood_beard" attribute = "bs_hood_beard"  value = { min = 1.0 max = 1.0 }	}
 			}
 			female = { # We're setting blend shapes for cap and crown. They will only have an effect when characters wear head gears. 
-				setting = { required_tags = "cap"		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
-				setting = { required_tags = "crown" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "cap,not(fit_under_crown)" 		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "crown,not(fit_under_crown)" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hat" 		attribute = "bs_hat"  	 value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "helmet" 	attribute = "bs_helmet"  value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hood" 		attribute = "bs_hood"  	 value = { min = 1.0 max = 1.0 }		}
@@ -14754,8 +14735,8 @@ morph_genes = {
 				setting = { required_tags = "hood_beard" attribute = "bs_hood_beard"  value = { min = 1.0 max = 1.0 }	}
 			}
 			female = { # We're setting blend shapes for cap and crown. They will only have an effect when characters wear head gears. 
-				setting = { required_tags = "cap"		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
-				setting = { required_tags = "crown" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "cap,not(fit_under_crown)" 		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "crown,not(fit_under_crown)" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hat" 		attribute = "bs_hat"  	 value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "helmet" 	attribute = "bs_helmet"  value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hood" 		attribute = "bs_hood" 	 value = { min = 1.0 max = 1.0 }		}
@@ -14778,8 +14759,8 @@ morph_genes = {
 
 			}
 			female = { # We're setting blend shapes for cap and crown. They will only have an effect when characters wear head gears. 
-				setting = { required_tags = "cap"		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
-				setting = { required_tags = "crown" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "cap,not(fit_under_crown)" 		attribute = "bs_cap"  	 value = { min = 1.0 max = 1.0 }		}
+				setting = { required_tags = "crown,not(fit_under_crown)" 	attribute = "bs_crown"   value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hat" 		attribute = "bs_hat"  	 value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "helmet" 	attribute = "bs_helmet"  value = { min = 1.0 max = 1.0 }		}
 				setting = { required_tags = "hood" 		attribute = "bs_hood" 	 value = { min = 1.0 max = 1.0 }		}

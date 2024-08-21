@@ -1,6 +1,6 @@
 ﻿
 should_apply_tribal_development_penalty_trigger = {
-	has_government = tribal_government
+	government_has_flag = government_is_tribal
 	NOR = {
 		any_liege_or_above = {
 			# Warcraft
@@ -39,4 +39,18 @@ faith_qualifies_for_west_african_pagan_feudalisation_trigger = {
 	#		has_doctrine_parameter = unreformed
 	#	}
 	#}
+}
+
+should_use_temple_character_background_trigger = {
+	trigger_if = {
+		limit = { is_landed = yes }
+		government_has_flag = government_is_theocracy
+	}
+	trigger_else = {
+		OR = {
+			has_council_position = councillor_court_chaplain
+			government_has_flag = government_is_theocracy
+			is_clergy = yes
+		}
+	}
 }

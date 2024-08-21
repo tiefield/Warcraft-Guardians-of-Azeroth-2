@@ -19,6 +19,8 @@
 		Rollutez Rossez Rra'liss Rrajashiss Rralas Rralze Rrij'tu Rrokseless Rroth'juz Rrothan Salt'he Sarje Shaz'jes Shonas Shutanas 
 		Si'lesh Skalzeph Skez'ji Skith'je Skogesiss Sorjesi Sraj'hijas Sral'ash Sralar Sraluss Sralzi Srargezes Srith'jaris
 		Srothrureph Srupjegek Uj'es Uj'tiss Ukru Ur'tha
+		
+		Kondra Murkshadow Snakemane Venomtongue Serpentra Serpus
 	}
 
 	dynasty_names = {
@@ -40,13 +42,15 @@
 		Rollutez Rossez Rra'liss Rrajashiss Rralas Rralze Rrij'tu Rrokseless Rroth'juz Rrothan Salt'he Sarje Shaz'jes Shonas Shutanas 
 		Si'lesh Skalzeph Skez'ji Skith'je Skogesiss Sorjesi Sraj'hijas Sral'ash Sralar Sraluss Sralzi Srargezes Srith'jaris
 		Srothrureph Srupjegek Uj'es Uj'tiss Ukru Ur'tha
+		
+		Kondra Murkshadow Snakemane Venomtongue Serpentra Serpus
 	}
 
 	male_names = {
 		Anthiss Azanz Azjentus Azrajar Cora'kar Cryanus Darjah Eksis Eldanar Far'gaz Ha'kass Harash Heth'jatar Hisskari Kalithresh 
 		Karathress Kassar Kassarus Kaz'jatar Kel'tariss Krellian Kresh Lir'kess Mal'aga Mal'ur Malt'his Mel'akar Naj'entus Naj'ezen 
 		Nazjak Parjesh Pashmar Raj Raj'his Rajah Rajis Rak'sha Ral'esh Raz'jira Sakar'thiss Sakrasis Salaris Sarj'eth Shalzaru Sil'thrus  
-		Silivaz Skar'this Skessesh Skrathrax Sriss'tiz Szerris Szzull Vatilash Verathress Vethan Vorshasz Xiz Zaj'tal Zalashji Zalzjar  
+		Silivaz Skar'this Skessesh Skrathrax Sriss'tiz Szerris Szzull Tset Vatilash Verathress Vethan Vorshasz Xiz Zaj'tal Zalashji Zalzjar  
 		Zarathiss Zareth Zarjish Zarrin Zaviul Zethresh Zsal'liss Zsanesh
 		
 		# random names
@@ -66,11 +70,12 @@
 		Zserkkes Zsethrash Zsezress Zsithres Zsolt'hess Zsotazu Zuss
 	}
 	female_names = {
+		Anna Ursula Asprah
 		Aethanel Aga'thar Aldrantiss Alzana Asithra Assana Athissa Cassia Ethendriss Ghislania Ithriza Janira Kar'dress Kor'vess 
 		Kraj'tess Lazashi Lesha Leth'sindra Meridith Minzera Missra Nahjeen Najula Nalashj Nar'jira Narashi Narjiss Naz'jess Naz'jul 
 		Nazesh Nessa Nez'ara Nezara Nitara Qalina Rash'iss Ruuzel S'revess S'theno Sa'thress Salaria Saravess Sassz'ine Sathraviss 
 		Scilla Sej'tetha Ser'less Serena Sha'rathra Shalan'ali Shalja Shav'rar Siavass Silaszi Silisthra Sivara Sivash Ssa'veh 
-		Ssathara Sser'ah Ssra'vess Ssurine Szallah Szenastra Valishj Vazina Veehja Venna Vespia Vespira Vessana Vesthra Vixtris 
+		Ssathara Sser'ah Ssra'vess Ssurine Szallah Szenastra Valishj Vazina Veehja Vejsha Venna Vespia Vespira Vessana Vesthra Vixtris 
 		Vizja'ra Zaldraxia Zelissa Zephris Zharessa Zhiela
 	
 		# random names

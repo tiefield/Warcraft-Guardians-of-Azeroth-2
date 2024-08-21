@@ -637,8 +637,6 @@
  mercenary_company_faceless_ones:0 "Faceless Ones"
  mercenary_company_beginning_of_madness_article:0 "the "
  mercenary_company_beginning_of_madness:0 "Beginning of Madness"
- mercenary_company_corruptors_article:0 "the "
- mercenary_company_corruptors:0 "Corruptors of [TITLE.GetNameNoTierNoTooltip]"
  mercenary_company_tendrils_of_void_article:0 "the "
  mercenary_company_tendrils_of_void:0 "Tendrils of the Void"
 
@@ -709,6 +707,11 @@
  mercenary_company_bugstompers:0 "Bugstompers of [TITLE.GetNameNoTierNoTooltip]"
  mercenary_company_thunderlords_article:0 "the "
  mercenary_company_thunderlords:0 "Thunderlords of [TITLE.GetNameNoTierNoTooltip]"
+# Sea giants
+ mercenary_company_coast_striders_article:0 "the "
+ mercenary_company_coast_striders:0 "Coast Striders of [TITLE.GetNameNoTierNoTooltip]"
+ mercenary_company_deep_dwellers_article:0 "the "
+ mercenary_company_deep_dwellers:0 "Deep Dwellers of [TITLE.GetNameNoTierNoTooltip]"
 
 # Tortollan
 # Tortollan

@@ -7,7 +7,7 @@
 	#Main Group
 	doctrine = doctrine_temporal_head
 	doctrine = doctrine_gender_equal
-	doctrine = doctrine_pluralism_fundamentalist
+	doctrine = doctrine_pluralism_dark
 	doctrine = doctrine_theocracy_lay_clergy
 
 	#Marriage
@@ -42,8 +42,11 @@
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
 	
-	#Special
-	doctrine = special_doctrine_end_justifies_means
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_stoic
 
 	# Placeholder
 	traits = {

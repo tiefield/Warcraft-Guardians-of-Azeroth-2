@@ -996,7 +996,7 @@ diplomacy_majesty.4070 = {
 	desc = diplomacy_majesty.4070.desc
 	theme = diplomacy_majesty_focus
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = scope:my_vassal
 	
@@ -1341,7 +1341,7 @@ diplomacy_majesty.4071 = {
 	desc = diplomacy_majesty.4071.desc
 	theme = diplomacy_majesty_focus
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = root
@@ -1465,7 +1465,7 @@ diplomacy_majesty.4072 = {
 	desc = diplomacy_majesty.4072.desc
 	theme = diplomacy_majesty_focus
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = root
@@ -1664,7 +1664,7 @@ diplomacy_majesty.4073 = {
 	desc = diplomacy_majesty.4073.desc
 	theme = diplomacy_majesty_focus
 	override_background = {
-		event_background = study
+		reference = study
 	}
 	left_portrait = {
 		character = root
@@ -2221,11 +2221,11 @@ diplomacy_majesty_special.1010 = {
 				trigger = {
 					opposing_ai_values_trigger = { TARGET = scope:debater VALUE = zeal }
 					OR = {
-						root = {
-							like_abrahamic_religion_trigger = yes
+						root.faith = {
+							like_abrahamic_faith_trigger = yes
 						}
-						scope:debater = {
-							like_abrahamic_religion_trigger = yes
+						scope:debater.faith = {
+							like_abrahamic_faith_trigger = yes
 						}
 					}
 				}

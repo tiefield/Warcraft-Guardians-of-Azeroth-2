@@ -5,10 +5,7 @@ window = {
 	movable = no
 	allow_outside = yes
 
-	# Warcraft
-	visible = "[And(IsGameViewOpen('court_window'), Not(GetVariableSystem.HasValue( 'right_window_open', 'pol_factions' )))]"
-	
-	using = Window_Size_MainTab
+		using = Window_Size_MainTab
 
 	datacontext = "[GetVariableSystem]"
 
@@ -19,9 +16,6 @@ window = {
 		using = Window_Position_MainTab
 		using = Expand_Court_Positions
 
-		# Warcraft
-		on_start = "[GetVariableSystem.Set( 'right_window_open', 'court' )]"
-
 		on_start = "[GetVariableSystem.Set( 'council_tabs', 'my_council' )]"
 	}
 
@@ -30,9 +24,6 @@ window = {
 		using = Animation_FadeOut_Quick
 		using = Sound_WindowHide_Standard
 		using = Window_Position_MainTab_Hide
-
-		# Warcraft
-		on_start = "[GetVariableSystem.ClearIf( 'right_window_open', GetVariableSystem.HasValue( 'right_window_open', 'court' ) )]"
 	}
 
 	margin_widget = {
@@ -123,7 +114,7 @@ window = {
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
 					visible = "[CourtWindow.IsShowCourt]"
-					
+
 					using = Animation_Tab_Switch
 
 					vbox = {
@@ -143,7 +134,7 @@ window = {
 									datacontext = "[GetDecisionWithKey('invite_knights_decision')]"
 									visible = "[Decision.IsShownForPlayer]"
 
-									onclick = "[OpenDecisionDetailView(Decision.Self)]"
+									onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 									using = tooltip_se
 
 									size = { 210 30 }
@@ -162,7 +153,7 @@ window = {
 									datacontext = "[GetDecisionWithKey('invite_claimants_decision')]"
 									visible = "[Decision.IsShownForPlayer]"
 
-									onclick = "[OpenDecisionDetailView(Decision.Self)]"
+									onclick = "[OpenGameViewData( 'decision_detail', Decision.Self)]"
 									using = tooltip_se
 
 									size = { 210 30 }
@@ -242,6 +233,7 @@ window = {
 				## POSITONS
 				vbox_court_positions = {
 					name = "court_positions_subtab_tutorial_uses_this"
+					widgetid = "court_positions_subtab_tutorial_uses_this"
 					datacontext = "[CourtWindow.AccessCourtPositionWindow]"
 					visible = "[CourtWindow.IsShowPositions]"
 
@@ -256,7 +248,7 @@ window = {
 					visible = "[CourtWindow.IsShowPrison]"
 					layoutpolicy_horizontal = expanding
 					layoutpolicy_vertical = expanding
-					
+
 					using = Animation_Tab_Switch
 
 					state = {
@@ -696,6 +688,7 @@ window = {
 	window_character_filter = {
 		name = "court_character_filter_window"
 		datacontext = "[CourtWindow.GetCourt]"
+		size = { 510 860 }
 
 		blockoverride "editbox_properties"
 		{
@@ -723,6 +716,10 @@ window = {
 					filter_item = {
 						layoutpolicy_horizontal = expanding
 						datacontext = "[CharacterSelectionList.GetFilter('claim_filter')]"
+					}
+					filter_item = {
+						layoutpolicy_horizontal = expanding
+						datacontext = "[CharacterSelectionList.GetFilter('hostage_filter')]"
 					}
 				}
 			}

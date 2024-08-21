@@ -64,6 +64,27 @@ lich_king_female = {
 	titles = { e_scourge }
 }
 
+### Dragonflights ###
+aspect_male = {
+	type = character
+	gender = male
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { e_black_dragonflight e_green_dragonflight e_bronze_dragonflight e_blue_dragonflight e_red_dragonflight }
+}
+
+aspect_female = {
+	type = character
+	gender = female
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { e_black_dragonflight e_green_dragonflight e_bronze_dragonflight e_blue_dragonflight e_red_dragonflight }
+}
+
 ### Nigh Elves ###
 high_priest_kaldorei_male = {
 	type = character
@@ -88,6 +109,24 @@ high_priestess_kaldorei_female = {
 	titles = { e_kaldorei }
 }
 
+goblin_banker_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @special_prio
+	titles = { k_goblin_bankers }
+	top_liege = no
+}
+goblin_banker_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @special_prio
+	titles = { k_goblin_bankers }
+	top_liege = no
+}
 # Special cultural titles (sorted by culture, then government type).
 
 ### Orcs ###
@@ -302,32 +341,178 @@ high_kingdom_highelf_empire = {
 	name_lists = { name_list_quel_dorei name_list_sin_dorei }
 }
 
-### Nightbornes ###
+### Nightborne ###
 # Nighborne specific
-vicomte_male_name_list_nightborne_count = {
+#vicomte_male_name_list_nightborne_count = {
+#	type = character
+#	gender = male
+#	special = holder
+#	tier = county
+#	priority = @county_cultural_prio
+#	governments = { feudal_government clan_government theocracy_government }
+#	name_lists = { name_list_nightborne }
+#}
+#vicomtesse_male_name_list_nightborne_count = {
+#	type = character
+#	gender = female
+#	special = holder
+#	tier = county
+#	priority = @county_cultural_prio
+#	governments = { feudal_government clan_government theocracy_government }
+#	name_lists = { name_list_nightborne }
+#}
+#vicomte_name_list_nightborne_county = {
+#	type = title
+#	tier = county
+#	priority = @county_cultural_prio
+#	name_lists = { name_list_nightborne }
+#    governments = { feudal_government clan_government theocracy_government }
+#}
+
+### Draenei ###
+artificer_male_exodar_count = {
 	type = character
+	special = holder
+	tier = county
+	priority = @county_low_heritage_prio
+	top_liege = yes
 	gender = male
-	special = holder
-	tier = county
-	priority = @county_cultural_prio
-	governments = { feudal_government clan_government theocracy_government }
-	name_lists = { name_list_nightborne }
+	governments = { feudal_government clan_government }
+	heritages = { heritage_argusean }
 }
-vicomtesse_male_name_list_nightborne_count = {
+artificer_female_exodar_count = {
 	type = character
-	gender = female
 	special = holder
 	tier = county
-	priority = @county_cultural_prio
-	governments = { feudal_government clan_government theocracy_government }
-	name_lists = { name_list_nightborne }
+	priority = @county_low_heritage_prio
+	top_liege = yes
+	gender = female
+	governments = { feudal_government clan_government }
+	heritages = { heritage_argusean }
 }
-vicomte_name_list_nightborne_county = {
+shrine_exodar_county = {
 	type = title
 	tier = county
-	priority = @county_cultural_prio
-	name_lists = { name_list_nightborne }
+	priority = @county_low_heritage_prio
+    governments = { feudal_government clan_government }
+	heritages = { heritage_argusean }
+}
+harbinger_male_exodar_duke = {
+	type = character
+	special = holder
+	tier = duchy
+	priority = @duchy_low_heritage_prio
+	top_liege = yes
+	gender = male
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+harbinger_female_exodar_duke = {
+	type = character
+	special = holder
+	tier = duchy
+	priority = @duchy_low_heritage_prio
+	top_liege = yes
+	gender = female
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+bastion_exodar_duchy = {
+	type = title
+	tier = duchy
+	priority = @duchy_low_heritage_prio
     governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+sanctum_exodar_kingdom = {
+	type = title
+	tier = kingdom
+	priority = @kingdom_low_heritage_prio
+    governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+citadel_exodar_empire = {
+	type = title
+	tier = empire
+	priority = @empire_low_heritage_prio
+    governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+commander_male_exodar_king = {
+	type = character
+	special = holder
+	tier = kingdom
+	priority = @kingdom_low_heritage_prio
+	gender = male
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+	titles = { k_exodar }
+}
+high_commander_male_exodar_emperor = {
+	type = character
+	special = holder
+	tier = empire
+	priority = @empire_low_heritage_prio
+	gender = male
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+	titles = { k_exodar }
+}
+commander_female_exodar_king = {
+	type = character
+	special = holder
+	tier = kingdom
+	priority = @kingdom_low_heritage_prio
+	gender = female
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+	titles = { k_exodar }
+}
+high_commander_female_exodar_emperor = {
+	type = character
+	special = holder
+	tier = empire
+	priority = @empire_low_heritage_prio
+	gender = female
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+	titles = { k_exodar }
+}
+archon_female_exodar_king = {
+	type = character
+	special = holder
+	tier = kingdom
+	priority = @kingdom_low_heritage_prio
+	gender = female
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+high_archon_female_exodar_emperor = {
+	type = character
+	special = holder
+	tier = empire
+	priority = @empire_low_heritage_prio
+	gender = female
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+archon_male_exodar_king = {
+	type = character
+	special = holder
+	tier = kingdom
+	priority = @kingdom_low_heritage_prio
+	gender = male
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
+}
+high_archon_male_exodar_emperor = {
+	type = character
+	special = holder
+	tier = empire
+	priority = @empire_low_heritage_prio
+	gender = male
+	governments = { feudal_government clan_government theocracy_government }
+	heritages = { heritage_argusean }
 }
 
 # Feudal
@@ -395,7 +580,7 @@ queen_female_naga_emperor = {
 	heritages = { heritage_azsharic }
 }
 
-### Humans group / Dwarf group ###
+### Human group / Dwarf group ###
 # Feudal
 high_king_male_emperor = {
 	type = character
@@ -405,7 +590,8 @@ high_king_male_emperor = {
 	priority = @empire_cultural_prio
 	top_liege = no
 	governments = { feudal_government clan_government necro_government }
-	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern heritage_dwarven }
+	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern }
+	name_lists = { name_list_old_dwarven name_list_bronzebeard name_list_wildhammer name_list_frostborn }
 }
 high_queen_female_emperor = {
 	type = character
@@ -415,14 +601,16 @@ high_queen_female_emperor = {
 	priority = @empire_cultural_prio
 	top_liege = no
 	governments = { feudal_government clan_government necro_government }
-	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern heritage_dwarven }
+	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern }
+	name_lists = { name_list_old_dwarven name_list_bronzebeard name_list_wildhammer name_list_frostborn }
 }
 high_kingdom_empire = {
 	type = title
 	tier = empire
 	priority = @empire_cultural_prio
     governments = { feudal_government clan_government necro_government }
-	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern heritage_dwarven }
+	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern }
+	name_lists = { name_list_old_dwarven name_list_bronzebeard name_list_wildhammer name_list_frostborn }
 }
 
 # Republic
@@ -463,7 +651,7 @@ empire_arathor = {
 	priority = @special_prio
 	governments = { feudal_government clan_government tribal_government }
 	heritages = { heritage_northern heritage_arathi heritage_gilnean heritage_southern }
-	titles = { e_arathor_empire }
+	titles = { e_arathor }
 }
 
 ### Kul tiran ###
@@ -547,6 +735,65 @@ grand_admiralty_tirassian_empire = {
 	governments = { feudal_government clan_government }
     name_lists = { name_list_tirassian }
 	faiths = { tidemother }
+}
+
+### Gnomes ###
+# Republic
+high_tinker_male_king = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { republic_government }
+	heritages = { heritage_gnomish }
+}
+high_tinker_female_king = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { republic_government }
+	heritages = { heritage_gnomish }
+}
+high_tinkership_kingdom = {
+	type = title
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+    governments = { republic_government }
+	heritages = { heritage_gnomish }
+}
+grand_tinker_male_emperor = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = @empire_cultural_prio
+	top_liege = no
+	governments = { republic_government }
+	heritages = { heritage_gnomish }
+}
+grand_tinker_female_emperor = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = @empire_cultural_prio
+	top_liege = no
+	governments = { republic_government }
+	heritages = { heritage_gnomish }
+}
+grand_tinkership_empire = {
+	type = title
+	tier = empire
+	priority = @empire_cultural_prio
+	top_liege = no
+    governments = { republic_government }
+	heritages = { heritage_gnomish }
 }
 
 ### Trolls ###
@@ -654,6 +901,28 @@ frost_queen_feudal_king {
 	governments = { feudal_government clan_government tribal_government }
 	name_lists = { name_list_drakkari }
 	religions = { loa_group }
+}
+
+### Amani ###
+warlord_male_troll_king = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { feudal_government clan_government tribal_government }
+	name_lists = { name_list_amani }
+}
+warlord_female_troll_king = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { feudal_government clan_government tribal_government }
+	name_lists = { name_list_amani }
 }
 
 ### Dragons ###
@@ -1190,6 +1459,36 @@ drottlag_kvaldir_duchy = {
 	name_lists = { name_list_kvaldir }
 }
 
+### Lucardir Special ###
+# Feudal
+#blood_thane_male_lucardir_count = {
+#    type = character
+#	gender = male
+#	special = holder
+#	tier = county
+#	priority = @special_prio
+#	top_liege = no
+#	governments = { feudal_government clan_government tribal_government necro_government }
+#	cultures = { lucardir } #paradox code doesn't accept specific cultures for some reason
+#}
+#blood_thane_female_lucardir_count = {
+#    type = character
+#	gender = female
+#	special = holder
+#	tier = county
+#	priority = @special_prio
+#	top_liege = no
+#	governments = { feudal_government clan_government tribal_government necro_government }
+#	cultures = { lucardir }
+#}
+#blood_thanedom_lucardir_county = {
+#	type = title
+#	tier = county
+#	priority = @special_prio
+#	governments = { feudal_government clan_government tribal_government necro_government }
+#	cultures = { lucardir }
+#}
+
 ### Staroveric ###
 # Feudal
 grand_prince_male_solstice_duke = {
@@ -1588,6 +1887,7 @@ commandery_mogu_county = {
 	governments = { feudal_government clan_government }
 	heritages = { heritage_mogu heritage_grummle heritage_sauroken heritage_pandaren heritage_jinyu heritage_hozen }
 }
+
 # Pandaren, Grummle
 mu_male_pandaren_duke = {
     type = character
@@ -1617,6 +1917,34 @@ province_pandaren_duchy = {
 	heritages = { heritage_pandaren heritage_grummle }
 }
 
+shodo_pan_male_king = {
+    type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { clan_government }
+	heritages = { heritage_pandaren }
+}
+shodo_pan_female_king = {
+    type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { clan_government }
+	heritages = { heritage_pandaren }
+}
+shaodin_kingdom = {
+	type = title
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	governments = { clan_government }
+	heritages = { heritage_pandaren }
+}
+
 # Mogu, Sauroken, Hozen
 warlord_male_mogu_duke = {
     type = character
@@ -1644,6 +1972,187 @@ clan_mogu_duchy = {
 	priority = @duchy_heritage_prio
 	governments = { feudal_government clan_government }
 	heritages = { heritage_mogu heritage_sauroken heritage_hozen }
+}
+
+# Theocratic - Pandaren, Hozen, Grummle
+elder_male_pandaren_baron = {
+	type = character
+	gender = male
+	special = holder
+	tier = barony
+	priority = @barony_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+elder_female_pandaren_baron = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = @barony_heritage_prio
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+master_male_pandaren_count = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = @county_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+master_female_pandaren_count = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = @county_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+master_male_pandaren_duke = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = @duchy_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+master_female_pandaren_duke = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = @duchy_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+grand_master_male_pandaren_king = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @kingdom_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+grand_master_female_pandaren_king = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @kingdom_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+high_master_male_pandaren_emperor = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = @empire_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+high_master_female_pandaren_emperor = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = @empire_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+order_pandaren_duchy = {
+	type = title
+	tier = duchy
+	priority = @duchy_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+order_pandaren_kingdom = {
+	type = title
+	tier = kingdom
+	priority = @kingdom_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+high_order_pandaren_empire = {
+	type = title
+	tier = empire
+	priority = @empire_heritage_prio
+	top_liege = no
+	governments = { theocracy_government }
+	heritages = { heritage_pandaren heritage_hozen heritage_grummle }
+}
+
+# Special
+caretaker_male = {
+	type = character
+	gender = male
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { k_golden_lotus }
+}
+caretaker_female = {
+	type = character
+	gender = female
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { k_golden_lotus }
+}
+serpent_master_male = {
+	type = character
+	gender = male
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { d_jade_serpent }
+}
+serpent_master_female = {
+	type = character
+	gender = female
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { d_jade_serpent }
+}
+sentinel_commander_male = {
+	type = character
+	gender = male
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { d_black_ox }
+}
+sentinel_commander_female = {
+	type = character
+	gender = female
+	special = holder
+	only_holder = yes
+	priority = @special_prio
+	top_liege = no
+	titles = { d_black_ox }
 }
 
 ### Jinyu ###
@@ -2199,7 +2708,7 @@ khaganat_centaur_empire = {
 	heritages = { heritage_zaetaric }
 }
 
-### Taurens ###
+### Tauren ###
 # Feudal
 chieftain_male_tauren_count = {
 	type = character
@@ -2405,6 +2914,89 @@ queen_female_nerubian_emperor = {
 	top_liege = no
 	governments = { feudal_government clan_government tribal_government necro_government }
 	name_lists = { name_list_nerubian }
+}
+
+### Titanforged ###
+# Feudal
+groundskeeper_male_titanforged_count = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = @county_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+groundskeeper_female_titanforged_count = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = @county_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+watcher_male_titanforged_duke = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = @duchy_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+watcher_female_titanforged_duke = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = @duchy_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+keeper_male_titanforged_king = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+keeper_female_titanforged_queen = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = @kingdom_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+highkeeper_male_titanforged_emperor = {
+	type = character
+	gender = male
+	special = holder
+	tier = empire
+	priority = @empire_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
+}
+highkeeper_female_titanforged_emperor = {
+	type = character
+	gender = female
+	special = holder
+	tier = empire
+	priority = @empire_cultural_prio
+	top_liege = no
+	governments = { feudal_government }
+	name_lists = { name_list_titanforged }
 }
 
 ### Governments

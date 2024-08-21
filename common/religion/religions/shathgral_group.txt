@@ -7,7 +7,7 @@
 	#Main Group
 	doctrine = doctrine_spiritual_head
 	doctrine = doctrine_gender_equal
-	doctrine = doctrine_pluralism_righteous
+	doctrine = doctrine_pluralism_dark
 	doctrine = doctrine_theocracy_temporal
 
 	#Marriage
@@ -41,9 +41,12 @@
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
-
-	#Special
-	doctrine = special_doctrine_end_justifies_means
+	
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_bewailment
 
 	# Placeholder
 	traits = {
@@ -80,9 +83,10 @@
 		wcmw_custom_generic_gem_violet_1
 		## Vanilla
 		# Star
-		muhakkima_3 muhakkima_4 muhakkima_5
-		muhakkima_custom_1 muhakkima_custom_2 muhakkima_custom_3
-		quranism
+		muhakkima_3 muhakkima_4 muhakkima_5 muhakkima_custom_1 muhakkima_custom_2 muhakkima_custom_3 quranism
+		islam_druze
+		# Eye
+		custom_faith_eye_of_providence custom_faith_hamsa
 	}
 
 	holy_order_names = {

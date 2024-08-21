@@ -398,3 +398,4 @@
 # 	name = "dynn_Voidbrain"
 # 	culture = forsaken	
 # }
+brack = { name = "Brack" culture = forsaken }

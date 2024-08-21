@@ -1,15 +1,116 @@
-﻿# Xin'ze clan [172000]
-520000={
+﻿# Mogu Clan [dynasty_mogu]
+lineofthunderking1={
+	name=Lei_Shen
+	dynasty=dynasty_mogu
+	dna = lei_shen_dna
+	culture=mogu religion=thunder_king
+	martial=11 diplomacy=4 stewardship=6 intrigue=9 learning=8
+	trait=education_martial_5 trait=intellect_good_3 trait = physique_good_3 trait = magic_good_3 trait = strong trait = thunder_king trait = being_order
+	trait=ambitious trait=arrogant trait=callous
+	1.1.1={
+		birth=yes
+		trait=creature_mogu
+		give_nickname = nick_the_thunder_king
+		#effect = {
+		#	add_character_flag = lei_shen_flag
+		#}
+	}
+	4.1.1={ death=yes }
+}
+
+# Xin'ze clan [172000]
+lineofxinze1={
+	name=Vian
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_martial_4 trait=just trait=ambitious trait=callous
+	359.3.7={ birth=yes trait=creature_mogu }
+	452.8.5={ death={ death_reason = death_natural_causes } }
+}
+
+lineofxinze2={
+	name=Sho
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_diplomacy_3 trait=deceitful trait=ambitious trait=wrathful trait = lifestyle_blademaster trait = strong
+	father = lineofxinze1
+	401.2.7={ birth=yes trait=creature_mogu }
+	492.8.5={ death={ death_reason = death_vanished } }
+}
+lineofxinze3={
+	name=Xin
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_martial_1 trait=brave trait=fickle trait=callous trait=disloyal
+	father = lineofxinze1
+	412.3.5={ birth=yes trait=creature_mogu }
+	463.10.12={ death={ death_reason = death_battle killer = lineofxinze2 } }
+}
+
+lineofxinze4={
+	name=Wen
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_intrigue_3 trait=deceitful trait=ambitious trait=wrathful
+	father = lineofxinze2
+	445.9.5={ birth=yes trait=creature_mogu }
+	541.3.1={ death={ death_reason = death_siege } }
+}
+
+lineofxinze5={
+	name=Vian
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_diplomacy_1 trait=impatient trait=craven trait=just
+	father = lineofxinze4
+	491.3.7={ birth=yes trait=creature_mogu }
+	552.11.2={ death={ death_reason = death_duel killer = lineofxinze6 } }
+}
+lineofxinze6={
+	name=Wen
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_martial_2 trait=physique_good_2 trait=brave trait=wrathful trait=impatient
+	father = lineofxinze4
+	496.2.7={ birth=yes trait=creature_mogu }
+	518.5.12={ add_spouse = 520825 }
+	578.6.26={ death=yes }
+}
+
+lineofxinze7={
+	name=Mei
+	female=yes
+	dynasty=172000
+	culture=mogu religion=thunder_king
+	trait=education_diplomacy_2 trait=physique_good_1 trait=deceitful trait=wrathful trait=brave
+	father = lineofxinze6
+	mother = 520825
+	532.12.3={ birth=yes trait=creature_mogu }
+	600.2.11={ death=yes }
+}
+lineofxinze8={
 	name=Xin
 	dynasty=172000
 	culture=mogu religion=thunder_king
 	martial=7 diplomacy=5 stewardship=5 intrigue=6 learning=5
-	trait=education_martial_4 trait=physique_good_1 trait=ambitious trait=patient trait=brave trait=sadistic
+	trait=education_martial_4 trait=physique_good_3 trait=ambitious trait=brave trait=sadistic
+	father = lineofxinze6
+	mother = 520825
 	540.11.20={ birth=yes trait=creature_mogu }
 	560.1.1={
 		effect={
 			set_variable = { name = wc_endurance_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
 			set_variable = { name = wc_strength_physical_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_physical_trait_value }
+			add_trait = lifestyle_blademaster
+			add_trait_xp = {
+				trait = lifestyle_blademaster
+				value = {
+					integer_range = {
+						min = medium_lifestyle_random_xp_low
+						max = medium_lifestyle_random_xp_high
+					}
+				}
+			}
 		}
 		# trait=physical_lifestyle_endurance_3
 		# trait=physical_lifestyle_strength_3
@@ -17,14 +118,14 @@
 	}
 	611.10.11={ death=yes }
 }
-520001={
+lineofxinze9={
 	name=Feng
 	dynasty=172000
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=4 stewardship=8 intrigue=5 learning=5
 	trait=education_stewardship_4 trait=gluttonous trait=shrewd trait=deceitful trait=wrathful 
 	trait=ambitious 
-	father=520000	#Xin
+	father=lineofxinze8	#Xin
 	571.8.18={ birth=yes trait=creature_mogu }
 	621.7.22={ death=yes }
 }
@@ -116,10 +217,17 @@
 	dynasty=172001
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=7 stewardship=7 intrigue=4 learning=8
-	trait=education_stewardship_4 trait=mystic_2 trait=honest trait=craven trait=lazy 
+	trait=education_stewardship_4 trait=lifestyle_mystic trait=honest trait=craven trait=lazy 
 	trait=content 
 	father=520004	#Ren
-	79.10.9={ birth=yes trait=creature_mogu }
+	79.10.9={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	161.4.6={ death=yes }
 }
 520011={
@@ -265,10 +373,17 @@
 	dynasty=172001
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=7 stewardship=6 intrigue=4 learning=7
-	trait=education_learning_1 trait=mystic_2 trait=sadistic trait=ambitious 
+	trait=education_learning_1 trait=lifestyle_mystic trait=sadistic trait=ambitious 
 	trait=temperate trait=brave 
 	father=520021	#Gurthan
-	196.3.19={ birth=yes trait=creature_mogu }
+	196.3.19={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	275.6.2={ death=yes }
 }
 520026={
@@ -536,9 +651,17 @@
 	dynasty=172001
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=7 stewardship=4 intrigue=6 learning=8
-	trait=education_intrigue_3 trait=hunter_2 trait=zealous trait=ambitious trait=greedy 
+	trait=education_intrigue_3 trait=lifestyle_hunter trait=zealous trait=ambitious trait=greedy 
 	father=520046	#Shen
-	342.3.17={ birth=yes trait=creature_mogu }
+	342.3.17={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	402.12.21={ death=yes }
 }
 520054={
@@ -711,9 +834,16 @@
 	dynasty=172001
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=8 stewardship=5 intrigue=5 learning=5
-	trait=education_intrigue_3 trait=mystic_2 trait=temperate trait=generous trait=humble 
+	trait=education_intrigue_3 trait=lifestyle_mystic trait=temperate trait=generous trait=humble 
 	father=520065	#Lao
-	450.10.7={ birth=yes trait=creature_mogu }
+	450.10.7={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	538.11.17={ death=yes }
 }
 520072={
@@ -983,10 +1113,18 @@
 	dynasty=172002
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=7 stewardship=6 intrigue=7 learning=7
-	trait=education_martial_1 trait=hunter_2 trait=gluttonous trait=sadistic trait=gregarious 
+	trait=education_martial_1 trait=lifestyle_hunter trait=gluttonous trait=sadistic trait=gregarious 
 	trait=chaste 
 	father=520095	#Tsao
-	150.12.4={ birth=yes trait=creature_mogu }
+	150.12.4={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	232.8.25={ death=yes }
 }
 520099={
@@ -1414,10 +1552,17 @@
 	dynasty=172002
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=5 stewardship=5 intrigue=8 learning=5
-	trait=education_stewardship_1 trait=reveler_2 trait=shy trait=chaste trait=humble 
+	trait=education_stewardship_1 trait=lifestyle_reveler trait=shy trait=chaste trait=humble 
 	trait=content trait=drunkard 
 	father=520137	#Kien
-	419.4.11={ birth=yes trait=creature_mogu }
+	419.4.11={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	512.5.9={ death=yes }
 }
 520144={
@@ -1622,8 +1767,9 @@
 	647.6.12={ death=yes }
 }
 # Lore character
-520165={
-	name=Bu
+520165={ # Leader of the Shan'ze Clan, servant of the resurrected Thunder King
+	#name=Bu
+	name=Shan_Bu
 	dynasty=172002
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=8 stewardship=7 intrigue=8 learning=6
@@ -2045,10 +2191,18 @@
 	dynasty=172003
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=6 stewardship=4 intrigue=8 learning=4
-	trait=education_diplomacy_4 trait=hunter_2 trait=generous trait=gregarious 
+	trait=education_diplomacy_4 trait=lifestyle_hunter trait=generous trait=gregarious 
 	trait=sadistic 
 	father=520203	#Delan
-	261.1.1={ birth=yes trait=creature_mogu }
+	261.1.1={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	376.6.22={ death=yes }
 }
 520208={
@@ -2201,10 +2355,18 @@
 	dynasty=172003
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=4 stewardship=4 intrigue=6 learning=5
-	trait=education_martial_1 trait=hunter_2 trait=gregarious trait=arbitrary trait=paranoid 
+	trait=education_martial_1 trait=lifestyle_hunter trait=gregarious trait=arbitrary trait=paranoid 
 	trait=brave 
 	father=520219	#Borginn
-	396.11.4={ birth=yes trait=creature_mogu }
+	396.11.4={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	501.2.18={ death=yes }
 }
 520224={
@@ -2573,10 +2735,17 @@
 	dynasty=172004
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=6 stewardship=5 intrigue=5 learning=8
-	trait=education_diplomacy_4 trait=reveler_2 trait=generous trait=honest trait=ambitious 
+	trait=education_diplomacy_4 trait=lifestyle_reveler trait=generous trait=honest trait=ambitious 
 	trait=arrogant 
 	father=520253	#Rong
-	108.5.7={ birth=yes trait=creature_mogu }
+	108.5.7={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	185.6.17={ death=yes }
 }
 520260={
@@ -2852,10 +3021,17 @@
 	dynasty=172004
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=4 stewardship=5 intrigue=6 learning=5
-	trait=education_martial_2 trait=reveler_2 trait=brave trait=honest trait=lazy 
+	trait=education_martial_2 trait=lifestyle_reveler trait=brave trait=honest trait=lazy 
 	trait=patient 
 	father=520282	#Krol
-	300.3.26={ birth=yes trait=creature_mogu }
+	300.3.26={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	389.9.19={ death=yes }
 }
 520289={
@@ -3071,6 +3247,7 @@
 	trait=lunatic_1 
 	father=520305	#Zhao
 	442.3.27={ birth=yes trait=creature_mogu }
+	468.1.1={ add_spouse=520821 }
 	520.6.17={ death=yes }
 }
 520311={
@@ -3089,6 +3266,7 @@
 	dynasty=172004
 	culture=mogu religion=thunder_king
 	father=520310	#Tsao
+	mother=520821
 	470.6.18={ birth=yes trait=creature_mogu }
 	539.2.27={ death=yes }
 }
@@ -3100,6 +3278,7 @@
 	trait=education_stewardship_4 trait=paranoid trait=brave trait=cynical trait=honest 
 	trait=ill 
 	father=520310	#Tsao
+	mother=520821
 	477.4.3={ birth=yes trait=creature_mogu }
 	551.6.4={ death=yes }
 }
@@ -3109,6 +3288,7 @@
 	dynasty=172004
 	culture=mogu religion=thunder_king
 	father=520310	#Tsao
+	mother=520821
 	484.1.20={ birth=yes trait=creature_mogu }
 	564.12.13={ death=yes }
 }
@@ -3118,6 +3298,7 @@
 	dynasty=172004
 	culture=mogu religion=thunder_king
 	father=520310	#Tsao
+	mother=520821
 	494.9.11={ birth=yes trait=creature_mogu }
 	567.3.10={ death=yes }
 }
@@ -3509,10 +3690,17 @@
 	dynasty=172005
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=4 stewardship=5 intrigue=7 learning=6
-	trait=education_diplomacy_4 trait=mystic_2 trait=honest trait=chaste trait=paranoid 
+	trait=education_diplomacy_4 trait=lifestyle_mystic trait=honest trait=chaste trait=paranoid 
 	trait=gluttonous 
 	father=520347	#Rong
-	170.8.10={ birth=yes trait=creature_mogu }
+	170.8.10={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	249.4.3={ death=yes }
 }
 520356={
@@ -3600,10 +3788,17 @@
 	dynasty=172005
 	culture=mogu religion=thunder_king
 	martial=7 diplomacy=5 stewardship=8 intrigue=4 learning=8
-	trait=education_learning_2 trait=mystic_2 trait=sadistic trait=shy trait=content 
+	trait=education_learning_2 trait=lifestyle_mystic trait=sadistic trait=shy trait=content 
 	trait=trusting 
 	father=520358	#Vu
-	196.6.13={ birth=yes trait=creature_mogu }
+	196.6.13={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	291.12.12={ death=yes }
 }
 520365={
@@ -3762,10 +3957,18 @@
 	dynasty=172005
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=6 stewardship=5 intrigue=7 learning=8
-	trait=education_diplomacy_3 trait=hunter_2 trait=craven trait=just trait=sadistic 
+	trait=education_diplomacy_3 trait=lifestyle_hunter trait=craven trait=just trait=sadistic 
 	trait=wrathful 
 	father=520377	#Ming
-	293.12.9={ birth=yes trait=creature_mogu }
+	293.12.9={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	366.1.11={ death=yes }
 }
 520382={
@@ -4108,7 +4311,7 @@
 	649.6.9={ death=yes }
 }
 # Gormali clan [172006]
-520416={
+520416={ # Lore Character - Subjugator Gormal
 	name=Gormal
 	dynasty=172006
 	culture=mogu religion=thunder_king
@@ -4947,10 +5150,17 @@
 	dynasty=172008
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=8 stewardship=7 intrigue=4 learning=6
-	trait=education_learning_1 trait=reveler_2 trait=arrogant trait=shy trait=cynical 
+	trait=education_learning_1 trait=lifestyle_reveler trait=arrogant trait=shy trait=cynical 
 	trait=honest 
 	father=520497	#Jin
-	32.1.18={ birth=yes trait=creature_mogu }
+	32.1.18={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	100.7.15={ death=yes }
 }
 520502={
@@ -5225,9 +5435,16 @@
 	dynasty=172008
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=4 stewardship=6 intrigue=8 learning=8
-	trait=education_learning_1 trait=reveler_2 trait=lazy trait=brave trait=generous 
+	trait=education_learning_1 trait=lifestyle_reveler trait=lazy trait=brave trait=generous 
 	father=520524	#Lao
-	264.11.10={ birth=yes trait=creature_mogu }
+	264.11.10={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	354.6.21={ death=yes }
 }
 520530={
@@ -5360,10 +5577,18 @@
 	dynasty=172008
 	culture=mogu religion=thunder_king
 	martial=7 diplomacy=4 stewardship=5 intrigue=4 learning=6
-	trait=education_intrigue_3 trait=hunter_2 trait=just trait=wrathful trait=cynical 
+	trait=education_intrigue_3 trait=lifestyle_hunter trait=just trait=wrathful trait=cynical 
 	trait=lazy 
 	father=520541	#Bai
-	336.9.17={ birth=yes trait=creature_mogu }
+	336.9.17={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	414.2.23={ death=yes }
 }
 520544={
@@ -5557,10 +5782,17 @@
 	dynasty=172008
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=5 stewardship=8 intrigue=7 learning=5
-	trait=education_learning_2 trait=mystic_2 trait=honest trait=sadistic trait=generous 
+	trait=education_learning_2 trait=lifestyle_mystic trait=honest trait=sadistic trait=generous 
 	trait=shy trait=ill 
 	father=520559	#Quan
-	447.11.9={ birth=yes trait=creature_mogu }
+	447.11.9={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	523.2.27={ death=yes }
 }
 520564={
@@ -5640,14 +5872,15 @@
 	491.7.11={ birth=yes trait=creature_mogu }
 	566.11.24={ death=yes }
 }
-520572={
-	name=Zan
+520572={ # Lore Character - Groundbreaker Brojai
+	#name=Zan
+	name=Brojai
 	dynasty=172008
 	culture=mogu religion=thunder_king
-	martial=7 diplomacy=5 stewardship=4 intrigue=4 learning=4
-	trait=education_learning_1 trait=wrathful trait=gluttonous trait=lazy 
+	martial=11 diplomacy=5 stewardship=5 intrigue=4 learning=5
+	trait=education_learning_3 trait=wrathful trait=callous trait=diligent  trait = strong trait = aggressive_attacker
 	father=520568	#Xigan
-	504.4.13={ birth=yes trait=creature_mogu }
+	504.4.13={ birth=yes trait=creature_mogu give_nickname = nick_the_groundbreaker }
 	612.4.17={ death=yes }
 }
 520573={
@@ -5662,7 +5895,8 @@
 # Korune clan [172009]
 # Lore character
 520574={
-	name=Kien
+	#name=Kien
+	name=Shan_Kien
 	dynasty=172009
 	culture=mogu religion=thunder_king
 	martial=7 diplomacy=7 stewardship=4 intrigue=8 learning=7
@@ -6241,10 +6475,17 @@
 	dynasty=172010
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=7 stewardship=4 intrigue=8 learning=7
-	trait=education_diplomacy_4 trait=mystic_2 trait=ambitious trait=compassionate 
+	trait=education_diplomacy_4 trait=lifestyle_mystic trait=ambitious trait=compassionate 
 	trait=humble trait=patient 
 	father=520633	#Jao
-	363.5.12={ birth=yes trait=creature_mogu }
+	363.5.12={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	477.5.21={ death=yes }
 }
 520635={
@@ -6263,11 +6504,18 @@
 	dynasty=172010
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=6 stewardship=6 intrigue=5 learning=8
-	trait=education_martial_1 trait=mystic_2 trait=brave trait=patient trait=arbitrary 
+	trait=education_martial_1 trait=lifestyle_mystic trait=brave trait=patient trait=arbitrary 
 	trait=gluttonous trait=possessed_1 
 	trait=intellect_bad_2 
 	father=520633	#Jao
-	376.4.6={ birth=yes trait=creature_mogu }
+	376.4.6={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	442.12.31={ death=yes }
 }
 520637={
@@ -6569,18 +6817,19 @@
 	dynasty=172011
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=8 stewardship=5 intrigue=6 learning=4
-	trait=education_martial_2 trait=honest trait=paranoid trait=content trait=brave 
+	trait=education_martial_2 trait=honest trait=paranoid trait=brave trait = physique_good_3
 	500.11.16={ birth=yes trait=creature_mogu }
 	572.6.4={ death=yes }
 }
-520667={
-	name=Temuja
+520667={ # Zhao-Jin the Bloodletter, leader of the Shao-Tien (Lore Character)
+	#name=Temuja
+	name = Zhao_Jin
 	dynasty=172011
 	culture=mogu religion=thunder_king
-	martial=6 diplomacy=6 stewardship=6 intrigue=4 learning=4
-	trait=education_stewardship_1 trait=honest trait=sadistic trait=brave trait=greedy 
+	martial=8 diplomacy=6 stewardship=6 intrigue=3 learning=4
+	trait=education_martial_2 trait=honest trait=sadistic trait=brave trait = physique_good_2
 	father=520666	#Gochao
-	515.3.3={ birth=yes trait=creature_mogu }
+	515.3.3={ birth=yes trait=creature_mogu give_nickname = nick_the_bloodletter }
 	610.9.1={ death=yes }
 }
 520668={
@@ -6588,6 +6837,7 @@
 	female=yes
 	dynasty=172011
 	culture=mogu religion=thunder_king
+	trait = physique_good_3
 	father=520666	#Gochao
 	522.10.11={ birth=yes trait=creature_mogu }
 	607.8.10={ death=yes }
@@ -6840,10 +7090,17 @@
 	dynasty=172013
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=7 stewardship=4 intrigue=8 learning=8
-	trait=education_martial_1 trait=reveler_2 trait=shy trait=chaste trait=zealous 
+	trait=education_martial_1 trait=lifestyle_reveler trait=shy trait=chaste trait=zealous 
 	trait=sadistic 
 	father=520689	#Feng
-	166.10.17={ birth=yes trait=creature_mogu }
+	166.10.17={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	277.10.7={ death=yes }
 }
 520694={
@@ -7027,9 +7284,16 @@
 	dynasty=172013
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=6 stewardship=7 intrigue=5 learning=6
-	trait=education_diplomacy_3 trait=mystic_2 trait=cynical trait=craven 
+	trait=education_diplomacy_3 trait=lifestyle_mystic trait=cynical trait=craven 
 	father=520707	#Xieren
-	267.2.20={ birth=yes trait=creature_mogu }
+	267.2.20={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	347.8.10={ death=yes }
 }
 520713={
@@ -7202,7 +7466,7 @@
 	dynasty=172013
 	culture=mogu religion=thunder_king
 	father=520724	#Mo
-	373.7.4={ birth=yes trait=creature_mogu }
+	358.7.4={ birth=yes trait=creature_mogu }
 	475.8.4={ death=yes }
 }
 520731={
@@ -7342,7 +7606,7 @@
 	father=520740	#Kong
 	468.1.25={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 	}
 	585.4.13={ death=yes }
 }
@@ -7354,7 +7618,7 @@
 	father=520740	#Kong
 	475.7.2={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 	}
 	581.6.23={ death=yes }
 }
@@ -7384,7 +7648,7 @@
 	father=520744	#Meng
 	498.12.23={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 	}
 	593.11.26={ death=yes }
 }
@@ -7398,7 +7662,7 @@
 	father=520744	#Meng
 	506.4.19={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 	}
 	576.2.14={ death=yes }
 }
@@ -7410,7 +7674,7 @@
 	father=520749	#Itoka
 	526.4.26={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 	}
 	627.9.9={ death=yes }
 }
@@ -7436,7 +7700,7 @@
 	father=520749	#Itoka
 	542.6.22={ birth=yes trait=creature_mogu }
 	564.2.14 = {
-		religion = maldraxxi
+		#religion = maldraxxi
 		effect={ set_variable = { name = wc_death_magic_lifestyle_additional_perks_variable value = wc_perks_needed_for_level_3_magic_trait_value } }
 	}
 	620.4.13={ death=yes }
@@ -7475,10 +7739,17 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=6 stewardship=5 intrigue=4 learning=7
-	trait=education_diplomacy_3 trait=reveler_2 trait=gregarious trait=wrathful trait=zealous 
+	trait=education_diplomacy_3 trait=lifestyle_reveler trait=gregarious trait=wrathful trait=zealous 
 	trait=content 
 	father=520753	#Jin
-	40.8.15={ birth=yes trait=creature_mogu }
+	40.8.15={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	140.12.5={ death=yes }
 }
 520757={
@@ -7839,9 +8110,16 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=8 stewardship=6 intrigue=7 learning=8
-	trait=education_diplomacy_3 trait=reveler_2 trait=shy trait=greedy trait=content 
+	trait=education_diplomacy_3 trait=lifestyle_reveler trait=shy trait=greedy trait=content 
 	father=520791	#Zou
-	209.10.6={ birth=yes trait=creature_mogu }
+	209.10.6={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	285.4.8={ death=yes }
 }
 520794={
@@ -7995,10 +8273,18 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=5 stewardship=5 intrigue=8 learning=7
-	trait=education_diplomacy_4 trait=reveler_2 trait=patient trait=sadistic trait=arrogant 
+	trait=education_diplomacy_4 trait=lifestyle_reveler trait=patient trait=sadistic trait=arrogant 
 	trait=temperate trait=physique_bad_3 
 	father=520807	#Tu
-	355.3.9={ birth=yes trait=creature_mogu }
+	355.3.9={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
+	378.1.1={ add_spouse=520730 }
 	430.2.9={ death=yes }
 }
 520810={
@@ -8044,6 +8330,7 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	father=520809	#Wen
+	mother=520730
 	381.8.8={ birth=yes trait=creature_mogu }
 	485.7.7={ death=yes }
 }
@@ -8054,6 +8341,7 @@
 	martial=4 diplomacy=6 stewardship=4 intrigue=5 learning=8
 	trait=education_intrigue_3 trait=trusting trait=gregarious 
 	father=520809	#Wen
+	mother=520730
 	392.11.2={ birth=yes trait=creature_mogu }
 	467.5.18={ death=yes }
 }
@@ -8063,6 +8351,7 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	father=520809	#Wen
+	mother=520730
 	401.9.16={ birth=yes trait=creature_mogu }
 	490.4.23={ death=yes }
 }
@@ -8197,10 +8486,17 @@
 	dynasty=172014
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=8 stewardship=4 intrigue=5 learning=5
-	trait=education_learning_4 trait=mystic_2 trait=lazy trait=greedy trait=sadistic 
+	trait=education_learning_4 trait=lifestyle_mystic trait=lazy trait=greedy trait=sadistic 
 	trait=patient 
 	father=520822	#Hixin
-	488.2.21={ birth=yes trait=creature_mogu }
+	488.2.21={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	589.4.2={ death=yes }
 }
 520831={
@@ -8458,10 +8754,17 @@
 	dynasty=172015
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=5 stewardship=8 intrigue=7 learning=7
-	trait=education_stewardship_2 trait=mystic_2 trait=shy trait=gluttonous 
+	trait=education_stewardship_2 trait=lifestyle_mystic trait=shy trait=gluttonous 
 	trait=humble trait=cynical 
 	father=520851	#Dojan
-	86.10.8={ birth=yes trait=creature_mogu }
+	86.10.8={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	182.1.26={ death=yes }
 }
 520858={
@@ -8738,10 +9041,17 @@
 	dynasty=172015
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=8 stewardship=5 intrigue=6 learning=5
-	trait=education_diplomacy_3 trait=mystic_2 trait=greedy trait=shy trait=patient 
+	trait=education_diplomacy_3 trait=lifestyle_mystic trait=greedy trait=shy trait=patient 
 	trait=content trait=possessed_1 
 	father=520880	#Vian
-	271.8.16={ birth=yes trait=creature_mogu }
+	271.8.16={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	367.2.1={ death=yes }
 }
 520886={
@@ -8949,9 +9259,17 @@
 	dynasty=172015
 	culture=mogu religion=thunder_king
 	martial=6 diplomacy=4 stewardship=8 intrigue=7 learning=4
-	trait=education_stewardship_4 trait=hunter_2 trait=paranoid trait=greedy trait=arbitrary 
+	trait=education_stewardship_4 trait=lifestyle_hunter trait=paranoid trait=greedy trait=arbitrary 
 	father=520900	#Gochao
-	422.2.17={ birth=yes trait=creature_mogu }
+	422.2.17={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	498.10.6={ death=yes }
 }
 520908={
@@ -9171,10 +9489,17 @@
 	dynasty=172015
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=4 stewardship=6 intrigue=4 learning=6
-	trait=education_stewardship_1 trait=reveler_2 trait=just trait=gluttonous trait=trusting 
+	trait=education_stewardship_1 trait=lifestyle_reveler trait=just trait=gluttonous trait=trusting 
 	trait=diligent trait=lunatic_1 
 	father=520923	#Gurthan
-	550.5.25={ birth=yes trait=creature_mogu }
+	550.5.25={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	654.3.5={ death=yes }
 }
 520931={
@@ -9434,10 +9759,18 @@
 	dynasty=172016
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=6 stewardship=8 intrigue=8 learning=6
-	trait=education_intrigue_3 trait=hunter_2 trait=zealous trait=diligent 
+	trait=education_intrigue_3 trait=lifestyle_hunter trait=zealous trait=diligent 
 	trait=honest trait=brave trait=beauty_good_3 
 	father=520952	#Borginn
-	104.2.12={ birth=yes trait=creature_mogu }
+	104.2.12={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	171.12.15={ death=yes }
 }
 520958={
@@ -9937,9 +10270,16 @@
 	dynasty=172016
 	culture=mogu religion=thunder_king
 	martial=5 diplomacy=4 stewardship=5 intrigue=5 learning=8
-	trait=education_diplomacy_4 trait=mystic_2 trait=lustful trait=craven trait=generous 
+	trait=education_diplomacy_4 trait=lifestyle_mystic trait=lustful trait=craven trait=generous 
 	father=521006	#Zeng
-	478.11.8={ birth=yes trait=creature_mogu }
+	478.11.8={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	572.3.28={ death=yes }
 }
 521010={
@@ -10026,9 +10366,17 @@
 	dynasty=172016
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=5 stewardship=7 intrigue=6 learning=7
-	trait=education_diplomacy_3 trait=hunter_2 trait=patient trait=arrogant trait=content 
+	trait=education_diplomacy_3 trait=lifestyle_hunter trait=patient trait=arrogant trait=content 
 	father=521012	#Temuja
-	538.2.19={ birth=yes trait=creature_mogu }
+	538.2.19={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	621.9.5={ death=yes }
 }
 521019={
@@ -10604,10 +10952,18 @@
 	dynasty=172017
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=8 stewardship=4 intrigue=6 learning=7
-	trait=education_stewardship_4 trait=hunter_2 trait=arbitrary trait=gregarious trait=honest 
+	trait=education_stewardship_4 trait=lifestyle_hunter trait=arbitrary trait=gregarious trait=honest 
 	trait=zealous 
 	father=521068	#Vu
-	319.2.26={ birth=yes trait=creature_mogu }
+	319.2.26={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_hunter
+				track = hunter
+				value = 50
+			}
+		}
+	}
 	415.9.18={ death=yes }
 }
 521077={
@@ -10675,10 +11031,17 @@
 	dynasty=172017
 	culture=mogu religion=thunder_king
 	martial=4 diplomacy=4 stewardship=4 intrigue=4 learning=5
-	trait=education_stewardship_2 trait=reveler_2 trait=gluttonous trait=deceitful trait=arbitrary 
+	trait=education_stewardship_2 trait=lifestyle_reveler trait=gluttonous trait=deceitful trait=arbitrary 
 	trait=ambitious  
 	father=521075	#Deng
-	347.9.7={ birth=yes trait=creature_mogu }
+	347.9.7={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_reveler
+				value = 50
+			}
+		}
+	}
 	438.12.27={ death=yes }
 }
 521084={
@@ -10910,10 +11273,17 @@
 	dynasty=172017
 	culture=mogu religion=thunder_king
 	martial=8 diplomacy=6 stewardship=5 intrigue=6 learning=7
-	trait=education_intrigue_2 trait=mystic_2 trait=chaste trait=lazy trait=content 
+	trait=education_intrigue_2 trait=lifestyle_mystic trait=chaste trait=lazy trait=content 
 	trait=generous 
 	father=521103	#Bai
-	457.5.2={ birth=yes trait=creature_mogu }
+	457.5.2={ birth=yes trait=creature_mogu
+		effect = {
+			add_trait_xp = {
+				trait = lifestyle_mystic
+				value = 50
+			}
+		}
+	}
 	581.8.31={ death=yes }
 }
 521108={

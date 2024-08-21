@@ -41,6 +41,12 @@
 	doctrine = doctrine_clerical_gender_either
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_temporal_appointment
+	
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_sky_burial
 
 	# Placeholder
 	traits = {
@@ -282,12 +288,14 @@
 			#Main Group
 			doctrine = doctrine_no_head
 
-			doctrine = tenet_human_sacrifice
+			doctrine = tenet_bloody_feast
 			doctrine = tenet_warmonger
-			doctrine = tenet_sky_burials
+			#doctrine = tenet_sky_burials					 #TODO: add sky burials tradition to this religion and remove this comment before 1.12.x-update is merged
+			doctrine = tenet_cult_of_strength
 
 			# Magic
 			doctrine = doctrine_elemental_earth_decay_magic_approved
+			doctrine = doctrine_elemental_air_decay_magic_accepted
 
 			localization = {
 				#HighGod

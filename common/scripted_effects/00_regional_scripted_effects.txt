@@ -1,0 +1,582 @@
+﻿#For use with HornedMythicalCreature / call this effect (set_up_horned_mythical_creature_effect = yes) in the line before creating the artifact 
+#Use this in the artifact's name/description in the loc-file [ROOT.Char.Custom('HornedMythicalCreature')]
+#Remember to clear the var:horned_mythical_creature in your after = { ... }
+set_up_horned_mythical_creature_effect = {
+	random_list = {
+		# Warcraft
+		50 = {
+			trigger = {
+				exists = scope:target_location
+				scope:target_location = { warcraft_rhino_region_trigger = yes }
+			}
+			set_variable = {
+				name = horned_mythical_creature
+				value = flag:rhino
+			}
+		}
+		50 = {
+			set_variable = {
+				name = horned_mythical_creature
+				value = flag:unicorn
+			}
+		}
+		# Too common
+		# 50 = {
+			# trigger = { capital_province = { raptor_region_trigger = yes } }
+			# set_variable = {
+				# name = horned_mythical_creature
+				# value = flag:raptor
+			# }
+		# }
+		50 = {
+			trigger = {
+				exists = scope:target_location
+				scope:target_location = { direhorn_region_trigger = yes }
+			}
+			set_variable = {
+				name = horned_mythical_creature
+				value = flag:direhorn
+			}
+		}
+		50 = {
+			trigger = {
+				exists = scope:target_location
+				scope:target_location = { stegodon_region_trigger = yes }
+			}
+			set_variable = {
+				name = horned_mythical_creature
+				value = flag:stegodon
+			}
+		}
+		# Warcraft
+		#50 = {
+		#	set_variable = {
+		#		name = horned_mythical_creature
+		#		value = flag:erchitu
+		#	}
+		#}
+		#50 = {
+			# trigger = { capital_province = { kodo_region_trigger = yes } }
+		#	set_variable = {
+		#		name = horned_mythical_creature
+		#		value = flag:kodo
+		#	}
+		#}
+		#50 = {
+		#	set_variable = {
+		#		name = horned_mythical_creature
+		#		value = flag:bulgu
+		#	}
+		#}
+		# End of Warcraft
+		5 = {
+			trigger = {
+				exists = scope:target_location
+				scope:target_location = { thunder_lizard_region_trigger = yes }
+			}
+			set_variable = {
+				name = horned_mythical_creature
+				value = flag:thunder_lizard
+			}
+		}
+
+	}
+}
+
+#For use with RegionalMythicalCreature / call this effect (set_up_regional_mythical_creature_effect = yes) in the line before creating the artifact 
+#Use this in the artifact's name/description in the loc-file [ROOT.Char.Custom('RegionalMythicalCreature')] /and/ [ROOT.Char.Custom('RegionalMythicalCreatureLower')]
+#Remember to clear the var:regional_mythical_creature_trinket in your after = { ... }
+set_up_regional_mythical_creature_effect = {
+	if = {
+		limit = { NOT = { exists = var:regional_mythical_creature_trinket } }
+		random_list = {
+			50 = {
+				trigger = { location = { kraken_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:kraken
+				}
+			}
+			50 = {
+				trigger = { location = { whale_shark_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:whale_shark
+				}
+			}
+			50 = {
+				trigger = { location = { wolf_eel_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:wolf_eel
+				}
+			}
+			50 = {
+				trigger = { location = { riverbeast_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:riverbeast
+				}
+			}
+			50 = {
+				trigger = { location = { mammoth_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:mammoth
+				}
+			}
+			50 = {
+				trigger = { location = { basilisk_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:basilisk
+				}
+			}
+			50 = {
+				trigger = { location = { brutosaur_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:brutosaur
+				}
+			}
+			50 = {
+				trigger = { location = { devilsaur_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:devilsaur
+				}
+			}
+			50 = {
+				trigger = { location = { cloud_serpent_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:cloud_serpent
+				}
+			}
+			50 = {
+				trigger = { location = { hydra_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:hydra
+				}
+			}
+			50 = {
+				trigger = { location = { jormungar_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:jormungar
+				}
+			}
+			50 = {
+				trigger = { location = { chimaera_region_trigger = yes } }
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:chimaera
+				}
+			}
+			50 = {
+				set_variable = {
+					name = regional_mythical_creature_trinket
+					value = flag:dragon
+				}
+			}
+		}
+	}
+	#Fallback
+	else = {
+		set_variable = {
+			name = regional_mythical_creature_trinket
+			value = flag:dragon
+		}
+	}
+}
+
+select_local_farm_animal_effect = {
+	random_list = {
+		50 = {
+			set_variable = {
+				name = local_farm_animal
+				value = flag:goat
+			}
+		}
+		50 = {
+			set_variable = {
+				name = local_farm_animal
+				value = flag:chicken
+			}
+		}
+		50 = {
+			set_variable = {
+				name = local_farm_animal
+				value = flag:cow
+			}
+		}
+		50 = {
+			set_variable = {
+				name = local_farm_animal
+				value = flag:sheep
+			}
+		}
+		50 = {
+			#modifier = {
+			#	factor = 0
+			#	faith = {
+			#		OR = {
+			#			like_islam_religion_trigger = yes
+			#			like_judaism_religion_trigger = yes
+			#		}
+			#	}
+			#}
+			set_variable = {
+				name = local_farm_animal
+				value = flag:pig
+			}
+		}
+		50 = {
+			modifier = {
+				factor = 0
+				location = {
+					NOT = {
+						geographical_region = world_pandaria
+					}
+				}
+			}
+			set_variable = {
+				name = local_farm_animal
+				value = flag:yak
+			}
+		}
+	}
+}
+
+# Plague effect, get a regionally appropriate faith for people to scapegoat
+select_scapegoat_faith_effect = {
+	random_list = {
+		100 = { # Courtier in your realm with hostile faith
+			trigger = {
+				any_courtier_or_guest = {
+					save_temporary_scope_as = courtier_to_check
+					root.faith = {
+						faith_hostility_level = {
+							target = scope:courtier_to_check.faith
+							value >= faith_hostile_level
+						}
+					}
+				}
+			}
+			random_courtier_or_guest = {
+				limit = {
+					save_temporary_scope_as = courtier_to_check
+					root.faith = {
+						faith_hostility_level = {
+							target = scope:courtier_to_check.faith
+							value >= faith_hostile_level
+						}
+					}
+				}
+				faith = { save_scope_as = faith_to_blame }
+			}
+		}
+		100 = { # Vassal in your realm with hostile faith
+			trigger = {
+				top_liege = {
+					any_vassal_or_below = {
+						save_temporary_scope_as = courtier_to_check
+						root.faith = {
+							faith_hostility_level = {
+								target = scope:courtier_to_check.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+				}
+			}
+			top_liege = {
+				random_vassal_or_below = {
+					limit = {
+						save_temporary_scope_as = courtier_to_check
+						root.faith = {
+							faith_hostility_level = {
+								target = scope:courtier_to_check.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+					faith = { save_scope_as = faith_to_blame }
+				}
+			}
+		}
+		100 = { # Neighbouring hostile faith
+			trigger = {
+				any_neighboring_and_across_water_top_liege_realm_owner = {
+					any_sub_realm_county = {
+						save_temporary_scope_as = county_to_check
+						root.faith = {
+							faith_hostility_level = {
+								target = scope:county_to_check.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+				}
+			}
+			random_neighboring_and_across_water_top_liege_realm_owner = {
+				limit = {
+					any_sub_realm_county = {
+						save_temporary_scope_as = county_to_check
+						root.faith = {
+							faith_hostility_level = {
+								target = scope:county_to_check.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+				}
+				random_sub_realm_county = {
+					limit = {
+						save_temporary_scope_as = county_to_check
+						root.faith = {
+							faith_hostility_level = {
+								target = scope:county_to_check.faith
+								value >= faith_hostile_level
+							}
+						}
+					}
+					faith = { save_scope_as = faith_to_blame }
+				}
+			}
+		}
+		# TODO: 1.12.x -> Create a generic fallback 
+		# TODO: Future work -> discuss regional targets for outbreak scapegoats
+		# 10 = { # Regional, fallback
+		# 	random_list = {
+		# 		1000 = { # Judaism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_europe
+		# 						geographical_region = world_asia_minor
+		# 						geographical_region = world_middle_east
+		# 						geographical_region = world_africa_east
+		# 						geographical_region = world_africa_north
+		# 					}
+		# 				}
+		# 				# Jewish faiths shouldn't blame themselves
+		# 				NOT = { root.faith.religion = religion:judaism_religion }
+		# 				# Account for Syncretics and the like
+		# 				root.faith = {
+		# 					NOT = { has_doctrine_parameter = jewish_syncretic_actor_opinion_active }
+		# 				}
+		# 			}
+		# 			religion:judaism_religion = {
+		# 				random_faith = {
+		# 					limit = {
+		# 						NOR = { # Regional faiths should be excluded
+		# 							this = faith:malabarism
+		# 							this = faith:kabarism
+		# 						}
+		# 					}
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Islam
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_middle_east # This would only apply for non-Islamic middle-easterners
+		# 						geographical_region = world_india
+		# 						geographical_region = world_africa
+		# 						geographical_region = world_steppe
+		# 						geographical_region = world_asia_minor
+		# 						geographical_region = world_europe_west_iberia
+		# 						geographical_region = world_africa_east
+		# 						geographical_region = world_africa_north
+		# 					}
+		# 				}
+		# 				NOT = { root.faith.religion = religion:islam_religion }
+		# 				root.faith = {
+		# 					NOT = { has_doctrine_parameter = islamic_syncretic_actor_opinion_active }
+		# 				}
+		# 			}
+		# 			religion:islam_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Christianity
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_europe
+		# 						geographical_region = world_india
+		# 						geographical_region = world_steppe
+		# 						geographical_region = world_asia_minor
+		# 						geographical_region = world_tibet
+		# 						geographical_region = world_middle_east
+		# 						geographical_region = world_africa_east
+		# 						geographical_region = world_africa_north
+		# 					}
+		# 				}
+		# 				NOT = { root.faith.religion = religion:christianity_religion }
+		# 				root.faith = {
+		# 					NOT = { has_doctrine_parameter = christian_syncretic_actor_opinion_active }
+		# 				}
+		# 			}
+		# 			religion:christianity_religion = {
+		# 				if = { # Exclude Eastern Christians for Europe
+		# 					limit = {
+		# 						root = {
+		# 							capital_province = {
+		# 								OR = {
+		# 									geographical_region = world_europe
+		# 									geographical_region = world_asia_minor
+		# 								}
+		# 							}
+		# 						}
+		# 					}
+		# 					random_faith = {
+		# 						limit = {
+		# 							NOT = { has_doctrine_parameter = eastern_syncretic_actor_opinion_active }
+		# 						}
+		# 						save_scope_as = faith_to_blame
+		# 					}
+		# 				}
+		# 				else = { # Exclude non-Eastern Christians for Asia
+		# 					random_faith = {
+		# 						limit = {
+		# 							has_doctrine_parameter = eastern_syncretic_actor_opinion_active
+		# 						}
+		# 						save_scope_as = faith_to_blame
+		# 					}
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Jainism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_india
+		# 						geographical_region = world_burma
+		# 					}
+		# 				}
+		# 				NOT = { root.faith.religion = religion:jainism_religion }
+		# 			}
+		# 			religion:jainism_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Zoroastrianism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_india
+		# 						geographical_region = world_middle_east_persia
+		# 					}
+		# 				}
+		# 				NOT = { root.faith.religion = religion:zoroastrianism_religion }
+		# 			}
+		# 			religion:zoroastrianism_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Buddhism (Non-Buddhist Tibetans)
+		# 			trigger = {
+		# 				capital_province = {
+		# 					OR = {
+		# 						geographical_region = world_tibet
+		# 						geographical_region = world_burma # In case Burma ceases to be Buddhist
+		# 					}
+		# 				}
+		# 				NOT = { root.faith.religion = religion:buddhism_religion }
+		# 			}
+		# 			religion:buddhism_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # Bon (Non-Bon Tibetans)
+		# 			trigger = {
+		# 				capital_province = {
+		# 					geographical_region = world_tibet
+		# 				}
+		# 				NOT = { root.faith.religion = religion:bon_religion }
+		# 			}
+		# 			religion:bon_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # West African paganism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					geographical_region = world_africa_west
+		# 				}
+		# 				NOT = { root.faith.religion = religion:west_african_religion }
+		# 			}
+		# 			religion:west_african_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # West African paganism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					geographical_region = world_africa_west
+		# 				}
+		# 				NOT = { root.faith.religion = religion:west_african_bori_religion }
+		# 			}
+		# 			religion:west_african_bori_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # West African paganism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					geographical_region = world_africa_west
+		# 				}
+		# 				NOT = { root.faith.religion = religion:west_african_orisha_religion }
+		# 			}
+		# 			religion:west_african_orisha_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1000 = { # West African paganism
+		# 			trigger = {
+		# 				capital_province = {
+		# 					geographical_region = world_africa_west
+		# 				}
+		# 				NOT = { root.faith.religion = religion:west_african_roog_religion }
+		# 			}
+		# 			religion:west_african_roog_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 		1 = { # Generic Paganism, fallback
+		# 			trigger = {
+		# 				NOT = { root.faith.religion = religion:paganism_religion }
+		# 			}
+		# 			religion:paganism_religion = {
+		# 				random_faith = {
+		# 					save_scope_as = faith_to_blame
+		# 				}
+		# 			}
+		# 		}
+		# 	}
+		# }
+	}
+}

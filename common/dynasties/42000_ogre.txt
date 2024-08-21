@@ -1,6 +1,7 @@
 ﻿42000 = {
 	name = "dynn_Stonemaul" 
 	culture = ogre
+	motto = Stonemaul_motto
 }
 42001 = {
 	name = "dynn_Bloodarm"
@@ -8,12 +9,12 @@
 }
 
 42002 = { #Kinda lore dynasty of Or'kalar
-	name = "dynn_Stonehand" 
+	name = "Boulderfist"
 	culture = ogre
 }
 
 42003 = {
-	name = "dynn_Boulderhead" 
+	name = "Glopgut" 
 	culture = ogre
 }
 42004 = {
@@ -49,7 +50,7 @@
 	culture = ogre
 }
 42012 = {
-	name = "dynn_Gordunni"
+	name = "Gordok"
 	culture = ogre
 }
 

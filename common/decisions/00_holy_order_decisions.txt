@@ -41,13 +41,10 @@
 	}
 
 	is_valid = {
-		# Warcraft
-		trigger_if = {
-			limit = { NOT = { has_character_flag = holy_order_debug } }
-			custom_description = {
-				text = "is_king_or_emperor"
-				highest_held_title_tier >= tier_kingdom
-			}
+		# Warcraft - removed struggle condition
+		custom_description = {
+			text = "is_king_or_emperor"
+			highest_held_title_tier >= tier_kingdom
 		}
 		
 		custom_description = {
@@ -60,9 +57,6 @@
 		}
 		trigger_if = {
 			limit = {
-				# Warcraft
-				NOT = { has_character_flag = holy_order_debug }
-				
 				exists = faith.religious_head
 				NOT = { root = root.faith.religious_head }
 			}
@@ -93,21 +87,9 @@
 	cost = {
 		gold = {
 			value = holy_order_gold_cost
-			
-			# Warcraft
-			if = {
-				limit = { has_character_flag = holy_order_debug }
-				value = 0
-			}
 		}
 		piety = {
 			value = holy_order_piety_cost
-			
-			# Warcraft
-			if = {
-				limit = { has_character_flag = holy_order_debug }
-				value = 0
-			}
 		}
 	}
 
@@ -154,6 +136,14 @@
 			if = { # If you have no valid barony this will throw errors when you open the decision since the leader won't be saved - we add this check to avoid that 
 				limit = {
 					exists = scope:leader
+				}
+				scope:leader = {
+					add_gold = 100 #So that they have some money to lend out
+					add_piety_level = 2
+					add_gold = holy_order_starting_gold
+					every_courtier = {
+						add_trait = order_member
+					}
 				}
 				
 				# Messages
@@ -204,7 +194,7 @@
 			# }
 
 		}
-		create_holy_order_effect = { LEADER = scope:leader }
+		wc_create_holy_order_effect = { LEADER = scope:leader }
 	}
 	
 	ai_potential = {
@@ -236,11 +226,12 @@
 				}
 			}
 		}
+
 	}
 }
 
 borrow_from_holy_order_decision = { #by Linnéa Thimrén
-	picture = "gfx/interface/illustrations/decisions/decision_realm.dds"
+	picture = "gfx/interface/illustrations/decisions/decision_spend_money.dds"
 
 	desc = borrow_from_holy_order_decision_desc
 	selection_tooltip = borrow_from_holy_order_decision_tooltip
@@ -344,10 +335,11 @@ cancel_holy_order_lease_decision = {
 		}
 	}
 
-	ai_check_interval = 360
+	ai_check_interval = 36
 
 	is_shown = {
 		is_landed = yes
+
 		any_sub_realm_barony = {
 			barony_is_valid_for_holy_order_lease_cancellation_trigger = yes
 		}
@@ -374,21 +366,7 @@ cancel_holy_order_lease_decision = {
 		is_at_war = no
 	}
 
-	cost = {
-		piety = {
-			value = 0
-			if = {
-				limit = {
-					exists = scope:barony
-					scope:barony.lessee.faith = root.faith
-				}
-				add = cancel_holy_order_piety_cost
-			}
-		}
-	}
-
 	effect = {
-
 		revoke_holy_order_lease_effect = {
 			CHARACTER = root
 			TARGET = scope:barony.lessee
@@ -434,6 +412,7 @@ cancel_holy_order_lease_decision = {
 		is_landed = yes
 		highest_held_title_tier >= tier_county
 		any_sub_realm_barony = {
+			county.holder = { is_ai = yes }
 			is_under_holy_order_lease = yes
 		}
 	}
@@ -446,6 +425,19 @@ cancel_holy_order_lease_decision = {
 			exists = scope:barony.lessee
 			NOT = {
 				scope:barony.lessee.faith = root.faith
+			}
+		}
+		# Revoke if cynical
+		modifier = {
+			add = 100
+			ai_zeal <= -50
+			exists = scope:barony.lessee
+			NOT = {
+				any_patroned_holy_order = {
+					leader = {
+						this = scope:barony.lessee
+					}
+				}
 			}
 		}
 	}

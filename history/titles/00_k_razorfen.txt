@@ -23,6 +23,7 @@ d_razorfen = {
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
 	588.10.10={holder=160185} #Zaljazk[112001]
+	600.1.1={holder=charlga_razorflank} #Charlga[razorflank]
 }
 c_razorfen = {
 	# d_razorfen
@@ -48,6 +49,7 @@ c_razorfen = {
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
 	588.10.10={holder=160185} #Zaljazk[112001]
+	600.1.1={holder=charlga_razorflank} #Charlga[razorflank]
 }
 c_blackthorn = {
 	# d_razorfen
@@ -96,6 +98,7 @@ c_agamagar = {
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
 	588.10.10={holder=160185} #Zaljazk[112001]
+	600.1.1={holder=charlga_razorflank} #Charlga[razorflank]
 }
 c_brambleblade = {
 	1.1.1={
@@ -146,6 +149,7 @@ c_shartask = {
 	536.07.08={holder=160180} #Hegg[112001]
 	562.06.02={holder=160182} #Snokh[112001]
 	588.10.10={holder=160185} #Zaljazk[112001]
+	600.1.1={holder=charlga_razorflank} #Charlga[razorflank]
 }
 d_downs = {
 	800.1.1={
@@ -178,6 +182,11 @@ c_bael_modan = {
 	605.5.19={
 		liege = d_theramore
 		holder = 23001
+	}
+}
+b_boatmurder = {
+	605.5.19={
+		holder = haggis_boatmurder
 	}
 }
 c_spearhead = {
@@ -273,7 +282,7 @@ c_taurajo = {
 	427.07.10={holder=210083} #Yovahet[116000]
 	451.04.18={holder=210086} #Dzhounok[116000]
 	550.1.1={holder=210000} #Cairne[116000]
-	#Taurens from Dustwallow
+	#Tauren from Dustwallow
 	604.1.12={holder=210015} #Aska[116003]
 }
 c_mulgores_gate = {
@@ -292,7 +301,7 @@ c_mulgores_gate = {
 	427.07.10={holder=210083} #Yovahet[116000]
 	451.04.18={holder=210086} #Dzhounok[116000]
 	550.1.1={holder=210000} #Cairne[116000]
-	#Taurens from Dustwallow
+	#Tauren from Dustwallow
 	604.1.12={holder=210020} #Marn[116004]
 }
 c_wudotta = {
@@ -394,7 +403,7 @@ c_peace_point = {
 	427.07.10={holder=210083} #Yovahet[116000]
 	451.04.18={holder=210086} #Dzhounok[116000]
 	550.1.1={holder=210000} #Cairne[116000]
-	#Taurens from Dustwallow
+	#Tauren from Dustwallow
 	604.1.12={holder=210020} #Marn[116004]
 }
 d_bramblescar = {
@@ -470,7 +479,7 @@ c_karaneer = {
 	427.07.10={holder=210083} #Yovahet[116000]
 	451.04.18={holder=210086} #Dzhounok[116000]
 	550.1.1={holder=210000} #Cairne[116000]
-	#Taurens from Dustwallow
+	#Tauren from Dustwallow
 	604.1.12={holder=210015} #Aska[116003]
 }
 c_fort_mane = {

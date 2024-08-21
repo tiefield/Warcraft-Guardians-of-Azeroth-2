@@ -41,6 +41,12 @@
 	doctrine = doctrine_clerical_gender_male_only
 	doctrine = doctrine_clerical_marriage_allowed
 	doctrine = doctrine_clerical_succession_spiritual_appointment
+	
+	#Allow pilgrimages
+	doctrine = doctrine_pilgrimage_encouraged
+	
+	#Funeral tradition
+	doctrine = doctrine_funeral_cremation
 
 	# Placeholder
 	traits = {
@@ -194,6 +200,7 @@
 		DevilHerselfHimself = CHARACTER_THEMSELVES
 		EvilGodNames = {
 			EVIL_SPIRITS_NAME
+			THE_THUNDER_KING_NAME
 		}
 		
 		HouseOfWorship = TEMPLE_NAME
