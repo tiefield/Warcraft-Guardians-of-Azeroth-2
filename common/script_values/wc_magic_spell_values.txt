@@ -30,6 +30,7 @@ wc_spell_cooldown_short = 90 # 60
 wc_spell_cooldown_medium = 135 # 90 
 wc_spell_cooldown_long = 270 # 180
 wc_spell_cooldown_very_long = 450 # 300
+wc_spell_cooldown_ritual_short = 730 # 2 years
 wc_spell_cooldown_ritual = 1825 # 5 years
 wc_spell_cooldown_ritual_long = 3650 # 10 years
 ## BASE VALUES ##
@@ -1821,7 +1822,46 @@ wc_spell_arcane_dome_duration_days_value = {
 	}
 }
 ## ARCANE DOME ##
+## CREATE PORTAL ##
+wc_spell_create_portal_cost_mana_value = {
+	value = {
+		add = {
+			value = {
+				add = wc_max_mana_value
+				multiply = 0.75
+			}
+		}
+		desc = wc_mana_base_value_desc
+		format = "WC_MAX_MANA_VALUE_FORMAT"
+	}
+	round = yes
+}
+wc_spell_create_portal_cast_time_value = {
+	min = 0
+	value = {
+		add = 0
+		desc = wc_mana_base_value_desc
+		format = "WC_MAX_MANA_VALUE_FORMAT"
+	}
 
+	multiply = wc_order_magic_cast_time_value
+	multiply = wc_magic_cast_time_value
+	round = yes
+}
+wc_spell_create_portal_cooldown_value = {
+	min = 0
+	value = {
+		add = wc_spell_cooldown_ritual_short
+		desc = wc_mana_base_value_desc
+		format = "WC_MAX_MANA_VALUE_FORMAT"
+	}
+
+	multiply = wc_order_magic_cooldown_value
+	multiply = wc_magic_cooldown_value
+	round = yes
+}
+wc_spell_create_portal_duration_days_value = 0
+### CREATE PORTAL ###
 ## SCORCH ##
 wc_spell_scorch_base_mana_value = 6
 wc_spell_scorch_cost_mana_value = {

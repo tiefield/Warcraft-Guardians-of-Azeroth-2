@@ -1,4 +1,4 @@
-﻿any_spell_trigger = {
+any_spell_trigger = {
     OR = {
         $TRIGGER$ = { SPELL = flag:backdraft }
         $TRIGGER$ = { SPELL = flag:summon_fire_elemental }
@@ -27,6 +27,7 @@
 		$TRIGGER$ = { SPELL = flag:frostfire_bolt }
 		$TRIGGER$ = { SPELL = flag:evocation }
 		$TRIGGER$ = { SPELL = flag:arcane_dome }
+		$TRIGGER$ = { SPELL = flag:create_portal }
     }
 }
 
@@ -675,6 +676,12 @@ target_has_max_stacks_trigger = {
 			}
 			$TARGET$ = { has_county_modifier = wc_arcane_dome_county_modifier }
 		}
+		trigger_else_if = {
+			limit = {
+				$SPELL$ = flag:create_portal
+			}
+			$TARGET$ = { has_building_or_higher = wc_portal_01 }
+		}
 		trigger_else = {
 			always = yes
 		}
@@ -706,6 +713,7 @@ spell_target_is_province_or_title_trigger = { # One title
 		AND = { $SPELL$ = flag:blizzard $RANK_VALUE$ = 0 }
 		AND = { $SPELL$ = flag:evocation $RANK_VALUE$ = 0 }
 		AND = { $SPELL$ = flag:arcane_dome $RANK_VALUE$ = 0 }
+		AND = { $SPELL$ = flag:create_portal $RANK_VALUE$ = 0 }
 	}
 }
 
@@ -743,6 +751,7 @@ spell_target_title_subtype_province_trigger = {
 		AND = { $SPELL$ = flag:lava_lash $RANK_VALUE$ = 0 }
 		AND = { $SPELL$ = flag:backdraft $RANK_VALUE$ <= 2 }
 		AND = { $SPELL$ = flag:evocation $RANK_VALUE$ = 0 }
+		AND = { $SPELL$ = flag:create_portal $RANK_VALUE$ = 0 }
 	}
 }
 
@@ -917,6 +926,7 @@ satisfy_spell_triggers = {
 				$SPELL$ = flag:blizzard
 				$SPELL$ = flag:evocation
 				$SPELL$ = flag:arcane_dome
+				$SPELL$ = flag:create_portal
 			}
 		}
 		always = yes
