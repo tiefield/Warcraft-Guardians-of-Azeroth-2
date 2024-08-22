@@ -1,0 +1,16 @@
+﻿wc_portal_01 = {
+	cost_gold = 0
+
+    show_disabled = yes
+
+	county_modifier = {
+	}
+
+	character_modifier = {
+		travel_danger = -10
+	}
+
+	construction_time = 0
+
+	flag = portal
+}

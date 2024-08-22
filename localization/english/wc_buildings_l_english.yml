@@ -974,3 +974,8 @@
  building_type_cosmic_observatory:0 "$building_cosmic_observatory$"
  building_cosmic_observatory_desc:0 "Similar to the small observatories that dot the lands of Quel'thalas, this complex apparatus is surrounded by a sprawling academy devoted to the study of the Twisting Nether and the theoretical planes that lie in its interstices known as the Worlds Beyond."
  building_type_cosmic_observatory_desc:0 "$building_cosmic_observatory_desc$"
+
+ building_type_portal:0 "Portal"
+ building_type_wc_portal_01:0 "Mage $building_type_portal$"
+ building_type_wc_portal_01_desc:0 "$building_wc_portal_01_desc$"
+ building_wc_portal_01_desc:0 "A portal conjured by a mage or other magic wielder, used to quickly get from one place to another."

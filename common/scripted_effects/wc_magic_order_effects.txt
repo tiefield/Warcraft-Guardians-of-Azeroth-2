@@ -1620,3 +1620,30 @@ cast_blizzard_effect = {
         }
     }
 }
+
+cast_create_portal_effect = {
+    if = {
+        limit = { exists = var:create_portal_recipient }
+        var:create_portal_recipient = {
+            save_temporary_scope_as = this_recipient
+        }
+    }
+    else_if = {
+        limit = {
+            exists = var:current_spell_name
+            var:current_spell_name = flag:create_portal
+            exists = var:spellbook_open
+            exists = var:spell_recipient
+        }
+        var:spell_recipient = {
+            save_temporary_scope_as = this_recipient
+        }
+    }
+
+    scope:spell_recipient ?= {
+        add_province_modifier = {
+            modifier = extra_building_slot
+        }
+        add_building = wc_portal_01
+    }
+}
