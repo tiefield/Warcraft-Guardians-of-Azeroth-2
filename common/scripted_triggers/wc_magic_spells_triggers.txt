@@ -680,7 +680,7 @@ target_has_max_stacks_trigger = {
 			limit = {
 				$SPELL$ = flag:create_portal
 			}
-			$TARGET$ = { has_building_or_higher = wc_portal_01 }
+			$TARGET$.title_province = { has_building_or_higher = wc_portal_01 }
 		}
 		trigger_else = {
 			always = yes

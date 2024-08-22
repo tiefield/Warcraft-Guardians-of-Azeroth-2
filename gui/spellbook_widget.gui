@@ -2279,6 +2279,7 @@ widget = {
                                                 }
                                             }
                                         }
+                                    }
                                 }
                             }
                         }
@@ -2288,7 +2289,7 @@ widget = {
         }
     }
 }
-}
+
 types spellbooktypes {
     type vbox_list_spell_titles_selection = vbox {
         name = "titles_grid"

@@ -296,3 +296,5 @@
  wc_spell_create_portal_targets:0 "[barony|E]"
  wc_spell_create_portal_effects:0 "Create a portal [building|E], allowing for an [army|E] or character to teleport through it."
  wc_learn_spell_create_portal:0 "You learn [wc_spell_create_portal|E]"
+
+ added_to_portal_network_tt:0 "[portal_location.GetName] is added to the Portal Network"

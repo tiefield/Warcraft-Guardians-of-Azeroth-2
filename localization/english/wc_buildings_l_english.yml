@@ -978,4 +978,5 @@
  building_type_portal:0 "Portal"
  building_type_wc_portal_01:0 "Mage $building_type_portal$"
  building_type_wc_portal_01_desc:0 "$building_wc_portal_01_desc$"
+ building_wc_portal_01:0 "$building_type_wc_portal_01$"
  building_wc_portal_01_desc:0 "A portal conjured by a mage or other magic wielder, used to quickly get from one place to another."

@@ -1,4 +1,4 @@
-init_order_spells_effect = {
+﻿init_order_spells_effect = {
     add_to_global_variable_list = { name = order_spells target = flag:polymorph }
     add_to_global_variable_list = { name = order_spells target = flag:conjure_refreshment }
     add_to_global_variable_list = { name = order_spells target = flag:counterspell }
@@ -1620,7 +1620,7 @@ cast_blizzard_effect = {
         }
     }
 }
-
+ 
 cast_create_portal_effect = {
     if = {
         limit = { exists = var:create_portal_recipient }
@@ -1639,11 +1639,63 @@ cast_create_portal_effect = {
             save_temporary_scope_as = this_recipient
         }
     }
+    scope:this_recipient = {
+        title_province = { save_scope_as = target_province }
+    }
+    location = {
+        add_building = wc_portal_01
+    }
+    scope:target_province = {
+        add_or_open_portal_to_province_effect = yes
+    }
+    add_to_portal_network_effect = { LOCATION = location.barony }
+    add_to_portal_network_effect = { LOCATION = scope:this_recipient }
+}
 
-    scope:spell_recipient ?= {
-        add_province_modifier = {
-            modifier = extra_building_slot
+add_or_open_portal_to_province_effect = {
+    if = {
+        limit = {
+            NOT = { has_building_or_higher = wc_portal_01 }
         }
         add_building = wc_portal_01
+    }
+    #todo: open portal 
+}
+
+add_to_portal_network_effect = {    
+    $LOCATION$ = {
+        save_scope_as = portal_location
+    }
+    custom_tooltip = added_to_portal_network_tt
+    if = { # Add the location to the roots portal network list
+        limit = {
+            NOT = {
+                is_in_portal_network_trigger = { LOCATION = scope:portal_location }
+            }
+        }
+        add_to_variable_list = {
+            name = portal_network_list
+            target = scope:portal_location
+        }
+    } 
+    scope:portal_location = { # Set the owner of the portal / portal network (useful if someone reviving an old one)
+        set_variable = {
+            name = portal_network_owner
+            value = root
+        }
+    }
+    every_in_list = { 
+        list = portal_network_list
+        save_scope_as = portal_destination
+        add_to_variable_list = { # Save the this portal to the other portals
+            name = portal_destinations
+            target = scope:portal_location
+        }
+        scope:portal_location = { # Save the locations of the other portals on this portal
+            add_to_variable_list = {
+                name = portal_destinations
+                target = scope:portal_destination
+            }
+        }
     }
 }

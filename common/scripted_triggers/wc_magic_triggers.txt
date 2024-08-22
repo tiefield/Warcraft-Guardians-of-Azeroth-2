@@ -218,3 +218,10 @@ is_casting_any_spell_trigger = {
 has_cd_spells_trigger = {
 	has_variable_list = spells_cd
 }
+
+is_in_portal_network_trigger = {
+    any_in_list = {
+        list = portal_network_list
+        this = $LOCATION$
+    }
+}
